@@ -50,8 +50,8 @@ nav { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.88); ba
 .nav-back:hover { background:rgba(26,26,24,0.05); }
 
 /* VIEWS */
-.view { display:none; opacity:0; transition:opacity .35s ease; }
-.view.active { display:block; opacity:1; }
+.view { display:none; }
+.view.active { display:block; }
 
 /* HERO HOME */
 .hero-home { max-width:var(--max); margin:0 auto; padding:80px 24px 60px; text-align:center; }
@@ -237,9 +237,9 @@ footer .logo span { color:var(--jp); }
   <div class="nav-logo" onclick="navigate('')">I&V <span>2026</span></div>
   <button class="nav-back" onclick="navigate('')">&#8592; Volver</button>
   <div class="nav-links">
-    <a href="#japon" onclick="navigate('japon')">Japon</a>
-    <a href="#islandia" onclick="navigate('islandia')">Islandia</a>
-    <a href="#comparar" onclick="navigate('comparar')">Comparar</a>
+    <a href="#japon">Japon</a>
+    <a href="#islandia">Islandia</a>
+    <a href="#comparar">Comparar</a>
   </div>
 </div>
 </nav>
@@ -1134,51 +1134,71 @@ footer .logo span { color:var(--jp); }
 </footer>
 
 <script>
-// SPA Router
+// State
+var currentView = null;
+var showTimer = null;
+
+// Navigate
 function navigate(view) {
   if (view) {
     window.location.hash = view;
   } else {
     history.pushState(null, '', window.location.pathname);
-    showView('home');
+    activateView('home');
   }
 }
 
-function showView(id) {
-  document.querySelectorAll('.view').forEach(v => {
+function activateView(id) {
+  if (currentView === id) return;
+  currentView = id;
+  if (showTimer) { clearTimeout(showTimer); showTimer = null; }
+
+  // Hide all views, reset their fade-ins
+  document.querySelectorAll('.view').forEach(function(v) {
     v.classList.remove('active');
+    v.querySelectorAll('.fade-in.visible').forEach(function(el) {
+      el.classList.remove('visible');
+      scrollObs.unobserve(el);
+    });
   });
-  const target = document.getElementById('view-' + id);
-  if (target) {
-    target.classList.add('active');
-    window.scrollTo(0, 0);
-    // Re-trigger animations
-    setTimeout(() => {
-      target.querySelectorAll('.fade-in').forEach(el => {
-        el.classList.remove('visible');
-      });
-      observeAll();
-    }, 50);
-  }
+
+  var target = document.getElementById('view-' + id);
+  if (!target) return;
+  target.classList.add('active');
+  window.scrollTo(0, 0);
+
+  // Wait for layout, then reveal
+  showTimer = setTimeout(function() {
+    var items = target.querySelectorAll('.fade-in');
+    var vh = window.innerHeight;
+    var delay = 0;
+    items.forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < vh + 50) {
+        // In viewport: stagger reveal
+        (function(e, d) {
+          setTimeout(function() { e.classList.add('visible'); }, d);
+        })(el, delay);
+        delay += 100;
+      } else {
+        // Below fold: use scroll observer
+        scrollObs.observe(el);
+      }
+    });
+  }, 60);
+
   // Update nav
-  const backBtn = document.querySelector('.nav-back');
-  const navLinks = document.querySelector('.nav-links');
-  if (id === 'home') {
-    backBtn.style.display = 'none';
-    navLinks.style.display = '';
-  } else {
-    backBtn.style.display = 'block';
-    navLinks.style.display = '';
-  }
-  // Update active link
-  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const activeLink = document.querySelector('.nav-links a[href="#' + id + '"]');
+  var backBtn = document.querySelector('.nav-back');
+  backBtn.style.display = (id === 'home') ? 'none' : 'block';
+
+  document.querySelectorAll('.nav-links a').forEach(function(a) { a.classList.remove('active'); });
+  var activeLink = document.querySelector('.nav-links a[href="#' + id + '"]');
   if (activeLink) activeLink.classList.add('active');
 }
 
-window.addEventListener('hashchange', () => {
-  const hash = window.location.hash.slice(1);
-  showView(hash || 'home');
+// Hash change
+window.addEventListener('hashchange', function() {
+  activateView(window.location.hash.slice(1) || 'home');
 });
 
 // Day toggle
@@ -1186,26 +1206,19 @@ function toggleDay(el) {
   el.classList.toggle('open');
 }
 
-// Scroll animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+// Scroll observer
+var scrollObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
+      scrollObs.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-function observeAll() {
-  document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-  });
-}
+}, { threshold: 0.05 });
 
 // Init
-document.addEventListener('DOMContentLoaded', () => {
-  const hash = window.location.hash.slice(1);
-  showView(hash || 'home');
-  observeAll();
+document.addEventListener('DOMContentLoaded', function() {
+  activateView(window.location.hash.slice(1) || 'home');
 });
 </script>
 </body>
