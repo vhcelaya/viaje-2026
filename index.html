@@ -190,6 +190,24 @@ nav { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.88); ba
 .final-checks div { padding:5px 0; display:flex; gap:8px; }
 .final-checks span { color:var(--is); font-weight:700; }
 
+/* ROUTE MAP */
+.route-map { max-width:var(--max); margin:0 auto; padding:0 24px 16px; }
+.route-map-inner { background:var(--surface); border-radius:20px; padding:28px 24px 20px; box-shadow:var(--shadow); }
+.route-map-inner h3 { font-size:14px; font-weight:700; margin-bottom:16px; letter-spacing:-0.2px; }
+.route-map svg { width:100%; height:auto; }
+.route-map .map-city { font-size:9px; font-weight:600; fill:var(--text2); }
+.route-map .map-dot { r:4; stroke-width:2; }
+.route-map .map-dot.jp-dot { fill:var(--jp); stroke:var(--jp-light); }
+.route-map .map-dot.is-dot { fill:var(--is); stroke:var(--is-light); }
+.route-map .map-route { fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.route-map .map-route.jp-route { stroke:var(--jp); stroke-dasharray:6 3; }
+.route-map .map-route.is-route { stroke:var(--is); stroke-dasharray:6 3; }
+.route-map .map-land { fill:#E8E4DC; stroke:#D4D0C8; stroke-width:0.5; }
+.route-map .map-water { fill:#D6E4ED; }
+@media(max-width:768px) {
+  .route-map .map-city { font-size:7px; }
+}
+
 /* IMAGE BANNER */
 .img-banner { width:100%; max-width:var(--max); margin:0 auto; padding:0 24px; }
 .img-banner img { width:100%; height:300px; object-fit:cover; border-radius:var(--radius); }
@@ -292,6 +310,37 @@ footer .logo span { color:var(--jp); }
       <div class="stat"><div class="stat-val jp">5</div><div class="stat-lbl">Ciudades</div></div>
       <div class="stat"><div class="stat-val jp">0h</div><div class="stat-lbl">Conduccion</div></div>
       <div class="stat"><div class="stat-val jp">~7.000€</div><div class="stat-lbl">Presupuesto total</div></div>
+    </div>
+  </div>
+
+  <!-- Route Map -->
+  <div class="route-map fade-in">
+    <div class="route-map-inner">
+      <h3>Recorrido: Tokyo → Hakone → Kyoto → Nara → Osaka → Hiroshima → Miyajima → Tokyo</h3>
+      <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg">
+        <!-- Water background -->
+        <rect class="map-water" x="0" y="0" width="700" height="380" rx="12"/>
+        <!-- Japan landmass (simplified) -->
+        <path class="map-land" d="M160,30 Q200,20 240,35 Q280,15 320,25 Q360,10 400,30 Q430,20 460,40 Q490,25 520,45 Q560,30 600,55 Q630,45 660,70 Q670,90 665,110 Q680,130 670,150 Q660,170 640,185 Q620,200 590,210 Q570,225 540,230 Q520,245 490,240 Q470,255 440,250 Q410,260 390,245 Q370,255 340,250 Q320,260 290,255 Q260,265 240,250 Q220,260 190,245 Q160,255 140,240 Q120,250 100,235 Q80,220 90,200 Q75,180 85,160 Q70,140 80,120 Q65,100 80,80 Q90,60 110,50 Q130,35 160,30 Z"/>
+        <!-- Honshu main island detail -->
+        <path class="map-land" d="M420,250 Q440,270 420,290 Q400,310 370,320 Q340,330 310,325 Q280,330 250,315 Q230,325 200,310 Q180,320 155,305 Q135,310 120,295 Q100,285 105,265 Q95,250 110,235 Q120,250 140,240 Q160,255 190,245 Q220,260 240,250 Q260,265 290,255 Q320,260 340,250 Q370,255 390,245 Q410,260 420,250 Z"/>
+        <!-- Shikoku -->
+        <path class="map-land" d="M180,285 Q210,275 240,280 Q270,270 300,278 Q320,275 340,285 Q350,300 335,310 Q310,320 280,315 Q250,320 220,310 Q195,315 180,305 Q170,295 180,285 Z"/>
+        <!-- Kyushu -->
+        <path class="map-land" d="M90,255 Q110,240 130,250 Q150,245 160,260 Q165,280 150,295 Q135,310 115,305 Q95,310 80,295 Q65,280 75,265 Q80,255 90,255 Z"/>
+        <!-- Route line -->
+        <polyline class="map-route jp-route" points="540,115 490,130 355,200 330,215 290,225 140,275 120,285 540,115"/>
+        <!-- Cities -->
+        <circle class="map-dot jp-dot" cx="540" cy="115" r="5"/><text class="map-city" x="550" y="110">Tokyo</text>
+        <circle class="map-dot jp-dot" cx="490" cy="130" r="4"/><text class="map-city" x="500" y="127">Hakone</text>
+        <circle class="map-dot jp-dot" cx="355" cy="200" r="5"/><text class="map-city" x="365" y="197">Kyoto</text>
+        <circle class="map-dot jp-dot" cx="330" cy="215" r="3.5"/><text class="map-city" x="340" y="213">Nara</text>
+        <circle class="map-dot jp-dot" cx="290" cy="225" r="5"/><text class="map-city" x="300" y="222">Osaka</text>
+        <circle class="map-dot jp-dot" cx="140" cy="275" r="4.5"/><text class="map-city" x="150" y="272">Hiroshima</text>
+        <circle class="map-dot jp-dot" cx="120" cy="285" r="4"/><text class="map-city" x="92" y="300">Miyajima</text>
+        <!-- Start/end indicator -->
+        <circle cx="540" cy="115" r="9" fill="none" stroke="var(--jp)" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.5"/>
+      </svg>
     </div>
   </div>
 
@@ -670,6 +719,40 @@ footer .logo span { color:var(--jp); }
       <div class="stat"><div class="stat-val is">Ring Road</div><div class="stat-lbl">+ Westfjords</div></div>
       <div class="stat"><div class="stat-val is">~50h</div><div class="stat-lbl">Conduccion</div></div>
       <div class="stat"><div class="stat-val is">~7-8k€</div><div class="stat-lbl">Presupuesto total</div></div>
+    </div>
+  </div>
+
+  <!-- Route Map -->
+  <div class="route-map fade-in">
+    <div class="route-map-inner">
+      <h3>Recorrido: Ring Road completa + Westfjords (sentido horario)</h3>
+      <svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- Water -->
+        <rect class="map-water" x="0" y="0" width="700" height="500" rx="12"/>
+        <!-- Iceland landmass -->
+        <path class="map-land" d="M120,200 Q130,175 155,160 Q170,150 190,145 Q195,130 210,120 Q225,110 240,115 Q250,105 270,100 Q285,95 300,100 Q315,90 335,85 Q355,80 375,88 Q395,82 415,90 Q435,85 455,95 Q475,90 495,100 Q515,95 530,105 Q545,100 560,115 Q570,110 585,120 Q595,130 590,145 Q600,155 595,170 Q605,180 600,195 Q610,210 600,225 Q605,240 595,255 Q600,270 585,280 Q590,295 575,300 Q565,310 550,305 Q540,315 520,310 Q505,320 485,315 Q470,325 450,320 Q435,330 415,322 Q400,332 380,325 Q365,335 345,328 Q330,335 310,330 Q295,340 275,332 Q260,340 240,330 Q225,335 210,325 Q195,330 180,320 Q165,325 150,315 Q135,320 125,308 Q110,310 105,295 Q95,285 100,270 Q90,260 98,245 Q88,235 95,220 Q100,210 120,200 Z"/>
+        <!-- Westfjords -->
+        <path class="map-land" d="M120,200 Q115,185 120,170 Q115,155 125,140 Q130,125 145,120 Q155,110 170,115 Q180,105 195,112 Q195,130 190,145 Q170,150 155,160 Q140,170 130,185 Q125,195 120,200 Z"/>
+        <!-- Snæfellsnes peninsula -->
+        <path class="map-land" d="M180,320 Q165,310 155,300 Q140,295 130,280 Q120,275 115,265 Q110,275 120,285 Q125,295 140,305 Q150,315 165,320 Q175,322 180,320 Z"/>
+        <!-- Route Ring Road + Westfjords -->
+        <polyline class="map-route is-route" points="240,300 280,330 330,332 380,325 430,325 480,315 530,290 575,255 595,210 580,155 530,115 470,100 410,95 355,110 330,145 290,160 260,175 215,160 165,135 135,175 115,265 145,305 180,320 210,325 240,300"/>
+        <!-- Cities/stops -->
+        <circle class="map-dot is-dot" cx="240" cy="300" r="6"/><text class="map-city" x="215" y="320">Reykjavik</text>
+        <circle class="map-dot is-dot" cx="280" cy="330" r="3.5"/><text class="map-city" x="263" y="348">Golden Circle</text>
+        <circle class="map-dot is-dot" cx="380" cy="325" r="3.5"/><text class="map-city" x="388" y="342">Vik</text>
+        <circle class="map-dot is-dot" cx="480" cy="315" r="3.5"/><text class="map-city" x="460" y="335">Jokulsarlon</text>
+        <circle class="map-dot is-dot" cx="575" cy="255" r="3.5"/><text class="map-city" x="555" y="273">Seydisfjordur</text>
+        <circle class="map-dot is-dot" cx="580" cy="155" r="3.5"/><text class="map-city" x="590" y="153">Myvatn</text>
+        <circle class="map-dot is-dot" cx="530" cy="115" r="3.5"/><text class="map-city" x="537" y="110">Husavik</text>
+        <circle class="map-dot is-dot" cx="470" cy="100" r="4"/><text class="map-city" x="450" y="90">Akureyri</text>
+        <circle class="map-dot is-dot" cx="355" cy="110" r="3.5"/><text class="map-city" x="340" y="100">Siglufjordur</text>
+        <circle class="map-dot is-dot" cx="210" cy="325" r="3.5"/><text class="map-city" x="170" y="340">Snaefellsnes</text>
+        <circle class="map-dot is-dot" cx="165" cy="135" r="4"/><text class="map-city" x="130" y="128">Isafjordur</text>
+        <circle class="map-dot is-dot" cx="135" cy="175" r="3.5"/><text class="map-city" x="88" y="180">Dynjandi</text>
+        <!-- Start/end indicator -->
+        <circle cx="240" cy="300" r="10" fill="none" stroke="var(--is)" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.5"/>
+      </svg>
     </div>
   </div>
 
