@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Irene & Víctor — Verano 2026</title>
+<meta name="description" content="Japón vs Islandia. Guía completa de viaje, agosto-septiembre 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F5F0;
+  --bg2: #EFECE5;
+  --surface: #FFFFFF;
+  --border: rgba(26,26,24,0.08);
+  --border2: rgba(26,26,24,0.15);
+  --text: #1A1A18;
+  --text2: #4A4A46;
+  --text3: #8A8A84;
+  --jp: #C4441A;
+  --jp-light: #F8E8E2;
+  --jp-bg: rgba(196,68,26,0.06);
+  --is: #0F6E56;
+  --is-light: #E0F2EC;
+  --is-bg: rgba(15,110,86,0.06);
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --max: 1120px;
+  --radius: 16px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 6px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.08);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--font); color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased; line-height:1.7; font-size:15px; }
+a { color:var(--jp); text-decoration:none; transition:opacity .2s; }
+a:hover { opacity:.75; }
+img { display:block; width:100%; height:auto; }
+::selection { background:var(--jp); color:white; }
+
+/* NAV */
+nav { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.88); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:0 24px; }
+.nav-inner { max-width:var(--max); margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
+.nav-logo { font-weight:800; font-size:17px; color:var(--text); letter-spacing:-0.5px; cursor:pointer; }
+.nav-logo span { color:var(--jp); }
+.nav-links { display:flex; gap:2px; list-style:none; }
+.nav-links a { display:block; padding:8px 14px; font-size:12px; font-weight:600; color:var(--text3); text-transform:uppercase; letter-spacing:1px; border-radius:8px; transition:all .2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--text); background:rgba(26,26,24,0.05); opacity:1; }
+.nav-back { display:none; font-size:13px; font-weight:600; color:var(--text2); cursor:pointer; padding:6px 12px; border-radius:8px; border:1px solid var(--border2); background:transparent; font-family:var(--font); }
+.nav-back:hover { background:rgba(26,26,24,0.05); }
+
+/* VIEWS */
+.view { display:none; opacity:0; transition:opacity .35s ease; }
+.view.active { display:block; opacity:1; }
+
+/* HERO HOME */
+.hero-home { max-width:var(--max); margin:0 auto; padding:80px 24px 60px; text-align:center; }
+.hero-home .tag { font-size:12px; text-transform:uppercase; letter-spacing:3px; color:var(--text3); margin-bottom:16px; font-weight:600; }
+.hero-home h1 { font-size:clamp(36px,7vw,72px); font-weight:800; line-height:1.05; letter-spacing:-2px; margin-bottom:16px; }
+.hero-home .sub { font-size:18px; color:var(--text2); max-width:500px; margin:0 auto 48px; font-weight:400; }
+
+/* DESTINATION CARDS */
+.dest-cards { max-width:var(--max); margin:0 auto; padding:0 24px 32px; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.dest-card { position:relative; border-radius:20px; overflow:hidden; cursor:pointer; height:420px; box-shadow:var(--shadow-lg); transition:transform .3s ease, box-shadow .3s ease; }
+.dest-card:hover { transform:translateY(-4px); box-shadow:0 8px 40px rgba(0,0,0,0.15); }
+.dest-card img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+.dest-card:hover img { transform:scale(1.03); }
+.dest-card .overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:32px; }
+.dest-card h2 { color:white; font-size:36px; font-weight:800; letter-spacing:-1px; margin-bottom:6px; }
+.dest-card p { color:rgba(255,255,255,0.8); font-size:14px; font-weight:400; }
+
+/* COMPARE BUTTON */
+.compare-btn-wrap { max-width:var(--max); margin:0 auto; padding:0 24px 80px; text-align:center; }
+.compare-btn { display:inline-block; padding:14px 36px; font-size:15px; font-weight:700; color:var(--text); border:2px solid var(--text); border-radius:100px; cursor:pointer; transition:all .2s; background:transparent; font-family:var(--font); letter-spacing:-0.3px; }
+.compare-btn:hover { background:var(--text); color:var(--bg); }
+
+/* SECTION COMMON */
+.section { max-width:var(--max); margin:0 auto; padding:64px 24px; }
+.section-sm { max-width:var(--max); margin:0 auto; padding:32px 24px; }
+.section-tag { font-size:11px; text-transform:uppercase; letter-spacing:2.5px; color:var(--text3); margin-bottom:8px; font-weight:700; }
+.section h2 { font-size:clamp(26px,4.5vw,42px); font-weight:800; letter-spacing:-1px; line-height:1.15; margin-bottom:8px; }
+.section p.intro { font-size:16px; color:var(--text2); max-width:600px; margin-bottom:32px; }
+
+/* HERO DEST */
+.hero-dest { position:relative; max-width:var(--max); margin:0 auto; padding:0 24px; }
+.hero-dest-img { width:100%; height:400px; object-fit:cover; border-radius:20px; }
+.hero-dest-overlay { position:absolute; inset:0; margin:0 24px; border-radius:20px; background:linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%); display:flex; flex-direction:column; justify-content:flex-end; padding:40px; }
+.hero-dest-overlay h1 { color:white; font-size:clamp(32px,6vw,56px); font-weight:800; letter-spacing:-1.5px; }
+.hero-dest-overlay p { color:rgba(255,255,255,0.85); font-size:16px; margin-top:6px; }
+
+/* STATS */
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:32px 0; }
+.stat { background:var(--surface); border-radius:var(--radius); padding:20px; text-align:center; box-shadow:var(--shadow); }
+.stat-val { font-size:28px; font-weight:800; letter-spacing:-1px; }
+.stat-val.jp { color:var(--jp); }
+.stat-val.is { color:var(--is); }
+.stat-lbl { font-size:12px; color:var(--text3); margin-top:2px; font-weight:500; }
+
+/* DAY CARDS */
+.day { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:10px; overflow:hidden; transition:box-shadow .2s; box-shadow:var(--shadow); }
+.day:hover { box-shadow:var(--shadow-lg); }
+.day-header { display:flex; align-items:center; gap:12px; padding:16px 20px; cursor:pointer; user-select:none; }
+.day-num { font-size:11px; font-weight:700; padding:5px 12px; border-radius:8px; color:white; flex-shrink:0; }
+.day-num.jp { background:var(--jp); }
+.day-num.is { background:var(--is); }
+.day-title { font-size:15px; font-weight:700; flex:1; }
+.day-date { font-size:11px; color:var(--text3); font-weight:500; }
+.day-arrow { font-size:14px; color:var(--text3); transition:transform .2s; }
+.day.open .day-arrow { transform:rotate(90deg); }
+.day-body { display:none; padding:0 20px 18px; }
+.day.open .day-body { display:block; }
+.blk { padding:8px 0 8px 14px; border-left:3px solid var(--border); margin-bottom:8px; }
+.blk.cl { border-left-color:var(--jp); }
+.blk.mn { border-left-color:var(--is); }
+.blk.rom { border-left-color:#D4A574; }
+.blk-tag { font-size:10px; text-transform:uppercase; letter-spacing:1.2px; font-weight:700; margin-bottom:2px; }
+.blk-tag.cl { color:var(--jp); }
+.blk-tag.mn { color:var(--is); }
+.blk-tag.rom { color:#B8864A; }
+.blk p { font-size:13px; color:var(--text2); line-height:1.65; }
+.blk .s { font-weight:600; color:var(--text); }
+.day-tip { font-size:12px; color:var(--text3); padding:10px 14px; background:var(--bg2); border-radius:10px; margin-top:8px; line-height:1.5; }
+
+/* CURATED LIST */
+.curated-group { margin-bottom:32px; }
+.curated-group h3 { font-size:18px; font-weight:700; margin-bottom:14px; letter-spacing:-0.3px; }
+.curated-item { display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--border); gap:8px; flex-wrap:wrap; }
+.curated-item:last-child { border-bottom:none; }
+.curated-name { font-weight:600; font-size:14px; }
+.curated-desc { font-size:12px; color:var(--text3); flex:1; margin-left:8px; }
+.curated-link { font-size:12px; color:var(--jp); white-space:nowrap; }
+.curated-link.is-link { color:var(--is); }
+
+/* ACCOMMODATION */
+.acc-card { background:var(--surface); border-radius:var(--radius); padding:18px 20px; box-shadow:var(--shadow); margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+.acc-info h4 { font-size:15px; font-weight:700; margin-bottom:2px; }
+.acc-info p { font-size:12px; color:var(--text3); }
+.acc-price { font-size:14px; font-weight:700; white-space:nowrap; }
+.acc-price.jp { color:var(--jp); }
+.acc-price.is { color:var(--is); }
+
+/* LOGISTICS */
+.log-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.log-card { background:var(--surface); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); }
+.log-card h4 { font-size:14px; font-weight:700; margin-bottom:8px; }
+.log-card p { font-size:13px; color:var(--text2); line-height:1.6; }
+
+/* BUDGET */
+.budget-table { width:100%; border-collapse:collapse; background:var(--surface); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); }
+.budget-table th { text-align:left; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text3); padding:14px 18px; background:var(--bg2); }
+.budget-table td { padding:12px 18px; font-size:14px; border-bottom:1px solid var(--border); }
+.budget-table tr:last-child td { border-bottom:none; font-weight:700; }
+
+/* COMPARE VIEW */
+.comp-table { width:100%; border-collapse:collapse; background:var(--surface); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); margin-bottom:32px; }
+.comp-table th { padding:14px 18px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; background:var(--bg2); text-align:left; }
+.comp-table th:nth-child(2) { color:var(--jp); }
+.comp-table th:nth-child(3) { color:var(--is); }
+.comp-table td { padding:12px 18px; font-size:13px; border-bottom:1px solid var(--border); color:var(--text2); }
+.comp-table tr:last-child td { border-bottom:none; }
+
+/* COMPARISON BARS */
+.comp-bars { margin:32px 0; }
+.comp-row { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+.comp-label { width:110px; font-size:12px; color:var(--text3); text-align:right; font-weight:600; flex-shrink:0; }
+.comp-track { flex:1; height:28px; background:var(--bg2); border-radius:14px; display:flex; overflow:hidden; }
+.comp-jp { background:var(--jp); height:100%; display:flex; align-items:center; justify-content:center; font-size:11px; color:white; font-weight:700; padding:0 8px; border-radius:14px 0 0 14px; }
+.comp-is { background:var(--is); height:100%; display:flex; align-items:center; justify-content:center; font-size:11px; color:white; font-weight:700; padding:0 8px; border-radius:0 14px 14px 0; }
+
+/* MOMENTS */
+.moment { display:grid; grid-template-columns:56px 1fr; gap:16px; padding:20px 0; border-bottom:1px solid var(--border); }
+.moment:last-child { border-bottom:none; }
+.moment-num { font-size:32px; font-weight:800; color:var(--bg2); text-align:center; line-height:1; padding-top:4px; }
+.moment h4 { font-size:16px; font-weight:700; margin-bottom:4px; }
+.moment p { font-size:13px; color:var(--text2); line-height:1.6; }
+.moment .when { font-size:11px; color:var(--text3); margin-top:4px; font-weight:500; }
+
+/* CONCERNS */
+.concern { background:var(--surface); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); margin-bottom:12px; }
+.concern h4 { font-size:14px; font-weight:700; margin-bottom:6px; color:var(--text); }
+.concern .ans { margin-top:8px; padding-left:14px; border-left:3px solid var(--is); font-size:13px; color:var(--text2); line-height:1.6; }
+
+/* FINAL RECOMMENDATION */
+.final-box { border:2px solid var(--jp); border-radius:24px; padding:48px 32px; text-align:center; margin-top:40px; background:var(--surface); position:relative; overflow:hidden; box-shadow:var(--shadow-lg); }
+.final-box::before { content:''; position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:300px; height:300px; background:var(--jp); opacity:.04; border-radius:50%; filter:blur(80px); }
+.final-box .flag { font-size:56px; margin-bottom:16px; }
+.final-box h3 { font-size:28px; font-weight:800; letter-spacing:-0.5px; margin-bottom:12px; }
+.final-box p { font-size:15px; color:var(--text2); max-width:520px; margin:0 auto 10px; line-height:1.7; }
+.final-checks { text-align:left; max-width:400px; margin:20px auto 0; font-size:13px; color:var(--text2); }
+.final-checks div { padding:5px 0; display:flex; gap:8px; }
+.final-checks span { color:var(--is); font-weight:700; }
+
+/* IMAGE BANNER */
+.img-banner { width:100%; max-width:var(--max); margin:0 auto; padding:0 24px; }
+.img-banner img { width:100%; height:300px; object-fit:cover; border-radius:var(--radius); }
+
+/* GRID 2 COL */
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+
+/* FOOTER */
+footer { text-align:center; padding:48px 24px; font-size:12px; color:var(--text3); border-top:1px solid var(--border); margin-top:60px; }
+footer .logo { font-size:18px; font-weight:800; margin-bottom:6px; color:var(--text); }
+footer .logo span { color:var(--jp); }
+
+/* ANIMATIONS */
+.fade-in { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  .dest-cards { grid-template-columns:1fr; }
+  .dest-card { height:280px; }
+  .stats { grid-template-columns:1fr 1fr; }
+  .log-grid { grid-template-columns:1fr; }
+  .grid2 { grid-template-columns:1fr; }
+  .nav-links { display:none; }
+  .nav-back { display:none !important; }
+  .hero-home { padding:48px 16px 40px; }
+  .section { padding:40px 16px; }
+  .section-sm { padding:20px 16px; }
+  .hero-dest-img { height:260px; }
+  .hero-dest-overlay { padding:24px; }
+  .comp-label { width:80px; font-size:11px; }
+  .comp-table { font-size:12px; }
+  .comp-table th, .comp-table td { padding:10px 12px; }
+}
+@media(max-width:480px) {
+  .stats { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="nav-inner">
+  <div class="nav-logo" onclick="navigate('')">I&V <span>2026</span></div>
+  <button class="nav-back" onclick="navigate('')">&#8592; Volver</button>
+  <div class="nav-links">
+    <a href="#japon" onclick="navigate('japon')">Japon</a>
+    <a href="#islandia" onclick="navigate('islandia')">Islandia</a>
+    <a href="#comparar" onclick="navigate('comparar')">Comparar</a>
+  </div>
+</div>
+</nav>
+
+<!-- ==================== HOME ==================== -->
+<div id="view-home" class="view active">
+  <div class="hero-home">
+    <div class="tag fade-in">Guia de viaje · Verano 2026</div>
+    <h1 class="fade-in">Irene & Victor<br>Verano 2026</h1>
+    <p class="sub fade-in">18 agosto &mdash; 3 septiembre · Dos destinos, una decision</p>
+  </div>
+
+  <div class="dest-cards">
+    <div class="dest-card fade-in" onclick="navigate('japon')">
+      <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=600&fit=crop" alt="Tokyo skyline" loading="lazy">
+      <div class="overlay">
+        <h2>Japon</h2>
+        <p>13 dias, 5 ciudades, 0 horas conduccion, ~7.000 EUR</p>
+      </div>
+    </div>
+    <div class="dest-card fade-in" onclick="navigate('islandia')">
+      <img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?w=1200&h=600&fit=crop" alt="Iceland waterfall" loading="lazy">
+      <div class="overlay">
+        <h2>Islandia</h2>
+        <p>15 dias, Ring Road + Westfjords, ~50h conduccion, ~7.000-8.000 EUR</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare-btn-wrap fade-in">
+    <button class="compare-btn" onclick="navigate('comparar')">Comparar ambos destinos</button>
+  </div>
+</div>
+
+<!-- ==================== JAPON ==================== -->
+<div id="view-japon" class="view">
+  <!-- Hero -->
+  <div class="hero-dest fade-in" style="padding-top:24px;">
+    <img class="hero-dest-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&h=600&fit=crop" alt="Japan scene" loading="lazy">
+    <div class="hero-dest-overlay">
+      <h1>Japon</h1>
+      <p>19 agosto &mdash; 2 septiembre · 13 dias completos</p>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="section-sm">
+    <div class="stats fade-in">
+      <div class="stat"><div class="stat-val jp">13</div><div class="stat-lbl">Dias completos</div></div>
+      <div class="stat"><div class="stat-val jp">5</div><div class="stat-lbl">Ciudades</div></div>
+      <div class="stat"><div class="stat-val jp">0h</div><div class="stat-lbl">Conduccion</div></div>
+      <div class="stat"><div class="stat-val jp">~7.000€</div><div class="stat-lbl">Presupuesto total</div></div>
+    </div>
+  </div>
+
+  <!-- Itinerary -->
+  <div class="section" id="jp-itinerary">
+    <div class="section-tag fade-in">Itinerario</div>
+    <h2 class="fade-in">Dia por dia</h2>
+    <p class="intro fade-in">Tokyo, Hakone, Kyoto, Osaka, Hiroshima, Miyajima. Trenes, templos, ramen y onsens.</p>
+
+    <div class="fade-in">
+    <!-- D1 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D1</span>
+        <span class="day-title">Llegada Tokyo + Shinjuku</span>
+        <span class="day-date">19 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Noche</div><p><span class="s">Golden Gai:</span> callejones con bares de 6 asientos. <span class="s">Omoide Yokocho:</span> yakitori bajo las vias del tren.</p></div>
+        <div class="day-tip">Jet lag, no forzar. Cenar y dormir.</div>
+      </div>
+    </div>
+
+    <!-- D2 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D2</span>
+        <span class="day-title">Asakusa + Tomigaya + Shibuya</span>
+        <span class="day-date">20 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Senso-ji</span> (templo mas antiguo, 628 d.C., ir antes de las 9am)</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">Tomigaya:</span> Fuglen (cafe noruego, muebles mid-century), Little Nap Coffee Stand, Lost and Found (ceramica)</p></div>
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Shibuya Crossing + Shibuya Sky</span> (mirador). Harajuku: Cat Street, Omotesando (arquitectura Tadao Ando)</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">Tsutaya Books Daikanyama</span> (libreria mas bonita de Tokyo)</p></div>
+      </div>
+    </div>
+
+    <!-- D3 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D3</span>
+        <span class="day-title">Tsukiji + Akihabara + TeamLab</span>
+        <span class="day-date">21 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Tsukiji Outer Market</span> (sushi de pie para desayunar). <span class="s">Akihabara</span> (arcades, 1-2h)</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">TeamLab Borderless Azabudai Hills</span> (~20€ pp, <a href="https://teamlab.art/e/borderless-azabudai/" target="_blank">teamlab.art</a>). Ginza (Hermes de Renzo Piano)</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Cafe</div><p><span class="s">Nexpect Coffee, Nihonbashi</span> (fundador de Fuglen Tokyo)</p></div>
+      </div>
+    </div>
+
+    <!-- D4 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D4</span>
+        <span class="day-title">Meiji Jingu + Yanaka + Shimokitazawa</span>
+        <span class="day-date">22 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Meiji Jingu</span> (santuario shinto en bosque urbano)</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">Yanaka</span> (barrio mas antiguo de Tokyo). <span class="s">Kayaba Coffee</span> (kissaten renovado, <a href="https://kayaba-coffee.com" target="_blank">kayaba-coffee.com</a>). Yanaka Ginza (calle retro)</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">Shimokitazawa</span> (vintage, vinilos, teatro). Bonus Track (tiendas en via de tren abandonada)</p></div>
+      </div>
+    </div>
+
+    <!-- D5 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D5</span>
+        <span class="day-title">Hakone: Fuji + onsen + arte</span>
+        <span class="day-date">23 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Monte Fuji desde Lago Ashi.</span> Teleferico Owakudani. Crucero.</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">Open Air Museum</span> (esculturas + Picasso)</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Romantico</div><p>Onsen privado al atardecer con vista a montanas. Bano juntos, cerveza fria.</p></div>
+        <div class="day-tip">Hakone Freepass: <a href="https://hakonenavi.jp/international/en/ticket/freepass/" target="_blank">hakonenavi.jp</a></div>
+      </div>
+    </div>
+
+    <!-- D6 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D6</span>
+        <span class="day-title">Shinkansen Kyoto + Higashiyama + Gion</span>
+        <span class="day-date">24 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Transporte</div><p>Shinkansen Tokyo a Kyoto, 2h15 (<a href="https://smart-ex.jp" target="_blank">smart-ex.jp</a>)</p></div>
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Kiyomizu-dera.</span> Calles Ninenzaka/Sannenzaka. <span class="s">Gion al anochecer</span> (barrio geishas)</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Cena</div><p>Primer kaiseki (cena multi-plato estacional)</p></div>
+      </div>
+    </div>
+
+    <!-- D7 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D7</span>
+        <span class="day-title">Fushimi Inari + cafes + artesania</span>
+        <span class="day-date">25 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Fushimi Inari 6:30am.</span> Miles de torii naranjas. Casi solos a esa hora.</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">Walden Woods Kyoto</span> (minimalista, <a href="https://waldenwoods.jp" target="_blank">waldenwoods.jp</a>) o Cafe Bibliotic Hello (pared de libros)</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">Kyo Amahare</span> (artesania en machiya 130 anos, <a href="https://amahare.jp" target="_blank">amahare.jp</a>). Taller cuchillos japoneses.</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Cena</div><p>Soba en Teuchisoba Kanei (tatami + jardin)</p></div>
+      </div>
+    </div>
+
+    <!-- D8 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D8</span>
+        <span class="day-title">Arashiyama + Kinkaku-ji + Pontocho</span>
+        <span class="day-date">26 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Arashiyama 7am</span> (bosque bamboo en silencio). Tenryu-ji (jardin UNESCO). <span class="s">Kinkaku-ji + Ryoan-ji</span></p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p>Bicicleta por Philosopher's Path. <span class="s">Murakami Kaishindo</span> (pasteleria desde 1907, <a href="https://murakami-kaishindo.jp" target="_blank">murakami-kaishindo.jp</a>)</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Romantico</div><p><span class="s">Pontocho kawadoko:</span> terrazas de madera sobre el rio Kamogawa. Solo mayo-septiembre.</p></div>
+      </div>
+    </div>
+
+    <!-- D9 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D9</span>
+        <span class="day-title">Nara + tarde libre Kyoto</span>
+        <span class="day-date">27 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Todai-ji</span> (Buda 15m). Ciervos. <span class="s">Kasuga Taisha</span> (3.000 linternas)</p></div>
+        <div class="blk"><div class="blk-tag" style="color:var(--text3)">Libre</div><p>Sin agenda. Volver a su cafe favorito. Rio Kamogawa. Pasear sin Google Maps.</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Especial</div><p>Ceremonia del te (media hora de calma absoluta)</p></div>
+      </div>
+    </div>
+
+    <!-- D10 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D10</span>
+        <span class="day-title">Osaka: Castle + Dotonbori</span>
+        <span class="day-date">28 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Castillo de Osaka.</span> Dotonbori (neones, canales)</p></div>
+        <div class="blk cl"><div class="blk-tag cl">Comida</div><p>Takoyaki en Aizuya, okonomiyaki, kushikatsu en Daruma (Shinsekai). 3-8€/plato.</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Monocle</div><p><span class="s">Nakazakicho</span> (barrio indie, galerias en casas antiguas)</p></div>
+      </div>
+    </div>
+
+    <!-- D11 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D11</span>
+        <span class="day-title">Osaka libre o Kobe</span>
+        <span class="day-date">29 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Osaka</div><p>Kuromon Market (mariscos, fruta premium). Amerikamura (vintage), sento de barrio (3€)</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Opcion Kobe</div><p>30 min en tren. Barrio Kitano, <span class="s">wagyu real</span> (set lunch ~40€), sake en Nada</p></div>
+      </div>
+    </div>
+
+    <!-- D12 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D12</span>
+        <span class="day-title">Hiroshima</span>
+        <span class="day-date">30 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Peace Memorial Park + Museo de la Paz + A-Bomb Dome</span></p></div>
+        <div class="blk cl"><div class="blk-tag cl">Comida</div><p>Okonomiyaki estilo Hiroshima (con fideos)</p></div>
+      </div>
+    </div>
+
+    <!-- D13 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D13</span>
+        <span class="day-title">Miyajima</span>
+        <span class="day-date">31 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Torii flotante Itsukushima.</span> Monte Misen (teleferico + caminata)</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Romantico</div><p><span class="s">Ryokan en la isla.</span> Isla vacia al atardecer (turistas se van 5pm). Cena en tatami. Onsen. Torii iluminado de noche, solos. <strong>Momento mas especial del viaje.</strong></p></div>
+      </div>
+    </div>
+
+    <!-- D14 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num jp">D14</span>
+        <span class="day-title">Regreso Tokyo + despedida</span>
+        <span class="day-date">1-2 sep</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Transporte</div><p>Shinkansen Hiroshima a Tokyo, 4h. Tarde libre.</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Cena final</div><p>Sushi omakase en barra. Vuelo 2 sep.</p></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Image banner -->
+  <div class="img-banner fade-in">
+    <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1200&h=600&fit=crop" alt="Fushimi Inari" loading="lazy">
+  </div>
+
+  <!-- Restaurants -->
+  <div class="section" id="jp-food">
+    <div class="section-tag fade-in">Gastronomia</div>
+    <h2 class="fade-in">Restaurantes, cafes y bares</h2>
+    <p class="intro fade-in">Seleccion curada estilo Monocle. Cada lugar elegido por una razon concreta.</p>
+
+    <div class="fade-in">
+    <div class="curated-group">
+      <h3>Tokyo &mdash; Cafes</h3>
+      <div class="curated-item"><span class="curated-name">Fuglen Tokyo</span><span class="curated-desc">Tomigaya. Cafe noruego, muebles mid-century</span><a class="curated-link" href="https://fuglen.com" target="_blank">fuglen.com</a></div>
+      <div class="curated-item"><span class="curated-name">Little Nap Coffee Stand</span><span class="curated-desc">Tomigaya. Espresso de especialidad</span></div>
+      <div class="curated-item"><span class="curated-name">Nexpect Coffee</span><span class="curated-desc">Nihonbashi. Del fundador de Fuglen</span></div>
+      <div class="curated-item"><span class="curated-name">Kayaba Coffee</span><span class="curated-desc">Yanaka. Kissaten renovado 1938</span><a class="curated-link" href="https://kayaba-coffee.com" target="_blank">kayaba-coffee.com</a></div>
+      <div class="curated-item"><span class="curated-name">Tsutaya Books Daikanyama</span><span class="curated-desc">Libreria + cafe</span><a class="curated-link" href="https://tsite.jp/daikanyama/" target="_blank">tsite.jp</a></div>
+      <div class="curated-item"><span class="curated-name">Onibus Coffee</span><span class="curated-desc">Nakameguro. Tostador local</span><a class="curated-link" href="https://onibuscoffee.com" target="_blank">onibuscoffee.com</a></div>
+      <div class="curated-item"><span class="curated-name">Sarutahiko Coffee</span><span class="curated-desc">Ebisu. Espresso japones</span></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Tokyo &mdash; Restaurantes</h3>
+      <div class="curated-item"><span class="curated-name">Afuri</span><span class="curated-desc">Ebisu. Ramen yuzu shio ligero</span><a class="curated-link" href="https://afuri.com" target="_blank">afuri.com</a></div>
+      <div class="curated-item"><span class="curated-name">Fuunji</span><span class="curated-desc">Shinjuku. Tsukemen (ramen frio para mojar), fila vale la pena</span></div>
+      <div class="curated-item"><span class="curated-name">Toritama</span><span class="curated-desc">Meguro. Yakitori de pollo premium</span></div>
+      <div class="curated-item"><span class="curated-name">Sushi Dai</span><span class="curated-desc">Toyosu. Sushi de mercado, llegar 5am</span></div>
+      <div class="curated-item"><span class="curated-name">Uobei</span><span class="curated-desc">Shibuya. Sushi en banda transportadora, pedir por tablet, 1€/plato</span></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Tokyo &mdash; Bares</h3>
+      <div class="curated-item"><span class="curated-name">Bar Benfiddich</span><span class="curated-desc">Shinjuku. Cocteles con hierbas del huerto del bartender</span></div>
+      <div class="curated-item"><span class="curated-name">Gen Yamamoto</span><span class="curated-desc">Azabu-Juban. 6 asientos, cocteles omakase estacionales</span></div>
+      <div class="curated-item"><span class="curated-name">Golden Gai</span><span class="curated-desc">Shinjuku. Callejones con 200+ bares de 6 asientos</span></div>
+      <div class="curated-item"><span class="curated-name">Omoide Yokocho</span><span class="curated-desc">Shinjuku. Yakitori + cerveza bajo las vias</span></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Kyoto &mdash; Cafes</h3>
+      <div class="curated-item"><span class="curated-name">Walden Woods Kyoto</span><span class="curated-desc">Minimalista, matcha latte</span><a class="curated-link" href="https://waldenwoods.jp" target="_blank">waldenwoods.jp</a></div>
+      <div class="curated-item"><span class="curated-name">Cafe Bibliotic Hello</span><span class="curated-desc">Pared de libros piso a techo</span></div>
+      <div class="curated-item"><span class="curated-name">% Arabica Kyoto</span><span class="curated-desc">Higashiyama. Espresso con vista al Yasaka</span><a class="curated-link" href="https://arabica.coffee" target="_blank">arabica.coffee</a></div>
+      <div class="curated-item"><span class="curated-name">Weekenders Coffee</span><span class="curated-desc">Tominokoji. Tostador tercera ola</span></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Kyoto &mdash; Restaurantes</h3>
+      <div class="curated-item"><span class="curated-name">Pontocho alley</span><span class="curated-desc">Terrazas kawadoko sobre el rio (solo verano)</span></div>
+      <div class="curated-item"><span class="curated-name">Teuchisoba Kanei</span><span class="curated-desc">Soba hecha a mano, tatami + jardin</span></div>
+      <div class="curated-item"><span class="curated-name">Omen</span><span class="curated-desc">Ginkaku-ji. Udon casero en casa tradicional</span></div>
+      <div class="curated-item"><span class="curated-name">Musubi</span><span class="curated-desc">Gion. Kaiseki accesible (~40€)</span></div>
+      <div class="curated-item"><span class="curated-name">Nishiki Market</span><span class="curated-desc">Street food: tamagoyaki, mochi, tsukemono</span></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Kyoto &mdash; Artesania / Tiendas</h3>
+      <div class="curated-item"><span class="curated-name">Kyo Amahare</span><span class="curated-desc">Artesania en machiya 130 anos</span><a class="curated-link" href="https://amahare.jp" target="_blank">amahare.jp</a></div>
+      <div class="curated-item"><span class="curated-name">Murakami Kaishindo</span><span class="curated-desc">Pasteleria desde 1907</span><a class="curated-link" href="https://murakami-kaishindo.jp" target="_blank">murakami-kaishindo.jp</a></div>
+      <div class="curated-item"><span class="curated-name">Ichizawa Shinzaburo Hanpu</span><span class="curated-desc">Bolsas de lona hechas a mano desde 1905</span></div>
+      <div class="curated-item"><span class="curated-name">SOU SOU</span><span class="curated-desc">Textiles japoneses contemporaneos</span><a class="curated-link" href="https://sousou.co.jp" target="_blank">sousou.co.jp</a></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Osaka &mdash; Comida</h3>
+      <div class="curated-item"><span class="curated-name">Aizuya</span><span class="curated-desc">Dotonbori. Takoyaki original</span></div>
+      <div class="curated-item"><span class="curated-name">Daruma</span><span class="curated-desc">Shinsekai. Kushikatsu (fritura en palito)</span></div>
+      <div class="curated-item"><span class="curated-name">Kuromon Market</span><span class="curated-desc">Mariscos, fruta premium</span></div>
+      <div class="curated-item"><span class="curated-name">Rikuro's</span><span class="curated-desc">Cheesecake jiggly famoso</span></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Kobe</h3>
+      <div class="curated-item"><span class="curated-name">Mouriya</span><span class="curated-desc">Wagyu Kobe certificado (set lunch desde 40€)</span><a class="curated-link" href="https://mouriya.co.jp" target="_blank">mouriya.co.jp</a></div>
+      <div class="curated-item"><span class="curated-name">Nada sake district</span><span class="curated-desc">Bodegas historicas junto al mar</span></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Miyajima</h3>
+      <div class="curated-item"><span class="curated-name">Iwaso Ryokan</span><span class="curated-desc">Cena kaiseki incluida</span><a class="curated-link" href="https://iwaso.com/en/" target="_blank">iwaso.com</a></div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Accommodation -->
+  <div class="section" id="jp-accommodation">
+    <div class="section-tag fade-in">Alojamiento</div>
+    <h2 class="fade-in">Donde dormir</h2>
+    <p class="intro fade-in">Hoteles boutique, design hotels y un ryokan que no se olvida.</p>
+
+    <div class="fade-in">
+    <div class="acc-card"><div class="acc-info"><h4>BnA WALL</h4><p>Tokyo. Hotel de arte, cada habitacion por un artista. <a href="https://bna-hotel.com/wall/" target="_blank">bna-hotel.com</a></p></div><div class="acc-price jp">80-130€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Trunk Hotel</h4><p>Shibuya. Boutique Design Hotels. <a href="https://trunk-hotel.com" target="_blank">trunk-hotel.com</a></p></div><div class="acc-price jp">150-220€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>NOHGA Hotel</h4><p>Ueno. Diseno + artesanos locales. <a href="https://nohgahotel.com/ueno/" target="_blank">nohgahotel.com</a></p></div><div class="acc-price jp">90-140€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Dormy Inn</h4><p>Varias ciudades. Onsen azotea + ramen gratis. <a href="https://hotespa.net/hotels/" target="_blank">hotespa.net</a></p></div><div class="acc-price jp">60-100€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Hotel Kanra</h4><p>Kyoto. Machiya moderno. <a href="https://hotelkanra.jp/en/" target="_blank">hotelkanra.jp</a></p></div><div class="acc-price jp">120-180€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Ace Hotel</h4><p>Kyoto. Edificio 1920, Stumptown. <a href="https://acehotel.com/kyoto/" target="_blank">acehotel.com</a></p></div><div class="acc-price jp">130-200€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Cross Hotel</h4><p>Osaka. En Dotonbori, onsen. <a href="https://crosshotel.com/osaka/en/" target="_blank">crosshotel.com</a></p></div><div class="acc-price jp">90-140€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Iwaso Ryokan</h4><p>Miyajima. Desde 1854, kaiseki incluida. <a href="https://iwaso.com/en/" target="_blank">iwaso.com</a></p></div><div class="acc-price jp">200-350€</div></div>
+    </div>
+  </div>
+
+  <!-- Logistics -->
+  <div class="section" id="jp-logistics">
+    <div class="section-tag fade-in">Logistica</div>
+    <h2 class="fade-in">Lo practico</h2>
+
+    <div class="log-grid fade-in">
+      <div class="log-card"><h4>Vuelos</h4><p>650-1.200€ pp. Turkish via Estambul mas barato. Buscar con Google Flights o Skyscanner.</p></div>
+      <div class="log-card"><h4>Visado</h4><p>Sin visado para espanoles. Rellenar Visit Japan Web antes del viaje (<a href="https://vjw.digital.go.jp" target="_blank">vjw.digital.go.jp</a>).</p></div>
+      <div class="log-card"><h4>eSIM</h4><p>MobiMatter 20GB ~14$ (<a href="https://mobimatter.com" target="_blank">mobimatter.com</a>). Activar en el aeropuerto.</p></div>
+      <div class="log-card"><h4>Dinero</h4><p>Japon necesita cash. 7-Eleven ATM para sacar yenes. IC Card Suica para transporte y konbinis.</p></div>
+      <div class="log-card"><h4>Seguro</h4><p>IATI (<a href="https://iatiseguros.com" target="_blank">iatiseguros.com</a>) o Heymondo (<a href="https://heymondo.com" target="_blank">heymondo.com</a>), ~80€ pp.</p></div>
+      <div class="log-card"><h4>Apps esenciales</h4><p>Google Maps, Google Translate (camara), Tabelog, SmartEX, Navitime, Visit Japan Web.</p></div>
+    </div>
+  </div>
+
+  <!-- Budget -->
+  <div class="section" id="jp-budget">
+    <div class="section-tag fade-in">Presupuesto</div>
+    <h2 class="fade-in">Desglose para 2 personas</h2>
+
+    <table class="budget-table fade-in">
+      <tr><th>Concepto</th><th>Rango</th></tr>
+      <tr><td>Vuelos x2</td><td>1.300 - 2.400€</td></tr>
+      <tr><td>Alojamiento 14 noches</td><td>1.400 - 2.500€</td></tr>
+      <tr><td>Ryokan Miyajima</td><td>240 - 400€</td></tr>
+      <tr><td>Transporte (trenes, metro)</td><td>600 - 1.000€</td></tr>
+      <tr><td>Comida 13 dias</td><td>650 - 1.200€</td></tr>
+      <tr><td>Cenas especiales x3</td><td>200 - 500€</td></tr>
+      <tr><td>Actividades</td><td>200 - 400€</td></tr>
+      <tr><td>Cafes + extras</td><td>100 - 200€</td></tr>
+      <tr><td>eSIM + seguro</td><td>250 - 470€</td></tr>
+      <tr><td><strong>Total estimado</strong></td><td><strong>~7.000€ media</strong></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== ISLANDIA ==================== -->
+<div id="view-islandia" class="view">
+  <!-- Hero -->
+  <div class="hero-dest fade-in" style="padding-top:24px;">
+    <img class="hero-dest-img" src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1200&h=600&fit=crop" alt="Iceland road" loading="lazy">
+    <div class="hero-dest-overlay">
+      <h1>Islandia</h1>
+      <p>18 agosto &mdash; 3 septiembre · 15 dias completos</p>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="section-sm">
+    <div class="stats fade-in">
+      <div class="stat"><div class="stat-val is">15</div><div class="stat-lbl">Dias completos</div></div>
+      <div class="stat"><div class="stat-val is">Ring Road</div><div class="stat-lbl">+ Westfjords</div></div>
+      <div class="stat"><div class="stat-val is">~50h</div><div class="stat-lbl">Conduccion</div></div>
+      <div class="stat"><div class="stat-val is">~7-8k€</div><div class="stat-lbl">Presupuesto total</div></div>
+    </div>
+  </div>
+
+  <!-- Itinerary -->
+  <div class="section" id="is-itinerary">
+    <div class="section-tag fade-in">Itinerario</div>
+    <h2 class="fade-in">Dia por dia</h2>
+    <p class="intro fade-in">Ring Road completa, Westfjords, glaciares, ballenas, hot pots y auroras boreales (con suerte).</p>
+
+    <div class="fade-in">
+    <!-- D1 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D1</span>
+        <span class="day-title">Llegada + Reykjavik</span>
+        <span class="day-date">18 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk mn"><div class="blk-tag mn">Relax</div><p><span class="s">Blue Lagoon o Sky Lagoon</span> (60-90€ pp)</p></div>
+        <div class="blk cl"><div class="blk-tag cl">Ciudad</div><p>Reykjavik: Hallgrimskirkja, Harpa.</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Cena</div><p><span class="s">Dill</span> (unico Michelin del pais, <a href="https://dillrestaurant.is" target="_blank">dillrestaurant.is</a>)</p></div>
+      </div>
+    </div>
+
+    <!-- D2 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D2</span>
+        <span class="day-title">Golden Circle</span>
+        <span class="day-date">19 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Thingvellir, Geysir, Gullfoss.</span></p></div>
+        <div class="blk mn"><div class="blk-tag mn">Opcional</div><p>Snorkel Silfra (~130€, <a href="https://dive.is" target="_blank">dive.is</a>)</p></div>
+      </div>
+    </div>
+
+    <!-- D3 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D3</span>
+        <span class="day-title">Cascadas + Reynisfjara</span>
+        <span class="day-date">20 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Seljalandsfoss + Skogafoss + Reynisfjara</span> (playa negra). Noche Vik.</p></div>
+      </div>
+    </div>
+
+    <!-- D4 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D4</span>
+        <span class="day-title">Cueva de hielo + Svartifoss</span>
+        <span class="day-date">21 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk mn"><div class="blk-tag mn">Aventura</div><p>Cueva hielo Katla (~90€). <span class="s">Fjadrargljufur.</span> Svartifoss (Skaftafell).</p></div>
+      </div>
+    </div>
+
+    <!-- D5 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D5</span>
+        <span class="day-title">Jokulsarlon + Diamond Beach</span>
+        <span class="day-date">22 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Jokulsarlon + zodiac</span> (~80€) + Diamond Beach.</p></div>
+        <div class="blk rom"><div class="blk-tag rom">Cena</div><p>Langosta en Pakkhus, Hofn.</p></div>
+      </div>
+    </div>
+
+    <!-- D6 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D6</span>
+        <span class="day-title">Stokksnes + Seydisfjordur</span>
+        <span class="day-date">23 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Paisaje</div><p><span class="s">Stokksnes/Vestrahorn.</span> Seydisfjordur.</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Relax</div><p>Vok Baths (~40€). ~4h conduccion.</p></div>
+      </div>
+    </div>
+
+    <!-- D7 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D7</span>
+        <span class="day-title">Dettifoss + Myvatn</span>
+        <span class="day-date">24 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Dettifoss.</span> Myvatn: Hverir, pseudocrateres, Grjotagja.</p></div>
+        <div class="blk mn"><div class="blk-tag mn">Relax</div><p>Earth Lagoon (~45€).</p></div>
+      </div>
+    </div>
+
+    <!-- D8 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D8</span>
+        <span class="day-title">Husavik ballenas + Godafoss</span>
+        <span class="day-date">25 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk mn"><div class="blk-tag mn">Aventura</div><p><span class="s">Husavik ballenas</span> (~70€, <a href="https://northsailing.is" target="_blank">northsailing.is</a>). <span class="s">Godafoss.</span> Akureyri.</p></div>
+      </div>
+    </div>
+
+    <!-- D9 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D9</span>
+        <span class="day-title">Trollaskagi + Siglufjordur</span>
+        <span class="day-date">26 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Ruta</div><p><span class="s">Trollaskagi:</span> Siglufjordur (Museo Arenque). <span class="s">Piscina Hofsos</span> (infinity, ~8€).</p></div>
+      </div>
+    </div>
+
+    <!-- D10 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D10</span>
+        <span class="day-title">Conduccion a Snaefellsnes</span>
+        <span class="day-date">27 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Ruta</div><p>~5h conduccion. <span class="s">Kirkjufell al atardecer.</span></p></div>
+      </div>
+    </div>
+
+    <!-- D11 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D11</span>
+        <span class="day-title">Peninsula Snaefellsnes</span>
+        <span class="day-date">28 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Clasico</div><p><span class="s">Snaefellsjokull, Djupalonssandur, Arnarstapi, Budakirkja.</span></p></div>
+      </div>
+    </div>
+
+    <!-- D12 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D12</span>
+        <span class="day-title">Fiordos Oeste: Dynjandi + Isafjordur</span>
+        <span class="day-date">29 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Paisaje</div><p><span class="s">Dynjandi</span> (7 niveles). <span class="s">Isafjordur.</span> ~5h conduccion.</p></div>
+      </div>
+    </div>
+
+    <!-- D13 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D13</span>
+        <span class="day-title">Latrabjarg + Raudisandur</span>
+        <span class="day-date">30 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk mn"><div class="blk-tag mn">Fauna</div><p><span class="s">Latrabjarg</span> (puffins). <span class="s">Raudisandur.</span></p></div>
+        <div class="blk mn"><div class="blk-tag mn">Relax</div><p>Hot pots Drangsnes (gratis).</p></div>
+      </div>
+    </div>
+
+    <!-- D14 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D14</span>
+        <span class="day-title">Regreso + Hraunfossar</span>
+        <span class="day-date">31 ago</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk cl"><div class="blk-tag cl">Ruta</div><p>~5-6h regreso. Deildartunguhver + Hraunfossar. Borgarnes.</p></div>
+      </div>
+    </div>
+
+    <!-- D15 -->
+    <div class="day" onclick="toggleDay(this)">
+      <div class="day-header">
+        <span class="day-num is">D15</span>
+        <span class="day-title">Reykjavik libre + despedida</span>
+        <span class="day-date">1-2 sep</span>
+        <span class="day-arrow">&#9654;</span>
+      </div>
+      <div class="day-body">
+        <div class="blk"><div class="blk-tag" style="color:var(--text3)">Libre</div><p>Reykjavik libre 2 dias. Cena de despedida. Vuelo 3 sep.</p></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Image banner -->
+  <div class="img-banner fade-in">
+    <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=800&h=500&fit=crop" alt="Iceland landscape" loading="lazy">
+  </div>
+
+  <!-- Restaurants -->
+  <div class="section" id="is-food">
+    <div class="section-tag fade-in">Gastronomia</div>
+    <h2 class="fade-in">Restaurantes y cafes</h2>
+
+    <div class="fade-in">
+    <div class="curated-group">
+      <h3>Reykjavik</h3>
+      <div class="curated-item"><span class="curated-name">Dill</span><span class="curated-desc">Unico Michelin del pais</span><a class="curated-link is-link" href="https://dillrestaurant.is" target="_blank">dillrestaurant.is</a></div>
+      <div class="curated-item"><span class="curated-name">Grillid</span><span class="curated-desc">Alta cocina con vista</span><a class="curated-link is-link" href="https://grillid.is" target="_blank">grillid.is</a></div>
+      <div class="curated-item"><span class="curated-name">Bajarins Beztu</span><span class="curated-desc">Hot dog mas famoso del pais</span></div>
+      <div class="curated-item"><span class="curated-name">Reykjavik Roasters</span><span class="curated-desc">Mejor cafe</span><a class="curated-link is-link" href="https://reykjavikroasters.is" target="_blank">reykjavikroasters.is</a></div>
+      <div class="curated-item"><span class="curated-name">Kaffi Loki</span><span class="curated-desc">Comida tradicional islandesa casera</span></div>
+      <div class="curated-item"><span class="curated-name">Stofan Cafe</span><span class="curated-desc">Sofas, velas, libros</span></div>
+      <div class="curated-item"><span class="curated-name">Marshall House</span><span class="curated-desc">Galerias + cafe (mismo edificio que Olafur Eliasson studio)</span></div>
+    </div>
+
+    <div class="curated-group">
+      <h3>Fuera de Reykjavik</h3>
+      <div class="curated-item"><span class="curated-name">Pakkhus</span><span class="curated-desc">Hofn. Langosta local</span></div>
+      <div class="curated-item"><span class="curated-name">Vogafjos</span><span class="curated-desc">Myvatn. Cafe granja, pan geotermal</span><a class="curated-link is-link" href="https://vogafjos.is" target="_blank">vogafjos.is</a></div>
+      <div class="curated-item"><span class="curated-name">Tjoruhusid</span><span class="curated-desc">Isafjordur. Pescado del dia en casa de madera</span></div>
+      <div class="curated-item"><span class="curated-name">Narfeyrarstofa</span><span class="curated-desc">Stykkisholmur. Mariscos Snaefellsnes</span></div>
+      <div class="curated-item"><span class="curated-name">Kaffi Raudka</span><span class="curated-desc">Seydisfjordur. Cafe en pueblo colorido</span></div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Accommodation -->
+  <div class="section" id="is-accommodation">
+    <div class="section-tag fade-in">Alojamiento</div>
+    <h2 class="fade-in">Donde dormir</h2>
+    <p class="intro fade-in">Guesthouses con caracter, hoteles boutique y la opcion campervan.</p>
+
+    <div class="fade-in">
+    <h3 style="margin-bottom:14px;">Guesthouses y hoteles</h3>
+    <div class="acc-card"><div class="acc-info"><h4>Kex Hostel (privadas)</h4><p>Reykjavik. Fabrica de galletas. <a href="https://kexhostel.is" target="_blank">kexhostel.is</a></p></div><div class="acc-price is">100-160€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Sand Hotel</h4><p>Reykjavik. Boutique. <a href="https://keahotels.is/sand-hotel" target="_blank">keahotels.is</a></p></div><div class="acc-price is">140-200€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Frost & Fire</h4><p>Hveragerdi. Rio geotermal. <a href="https://frostogfuni.is/en" target="_blank">frostogfuni.is</a></p></div><div class="acc-price is">130-190€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Black Beach Suites</h4><p>Vik. Ventanales al mar. <a href="https://blackbeachsuites.is" target="_blank">blackbeachsuites.is</a></p></div><div class="acc-price is">180-280€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Vogafjos</h4><p>Myvatn. Granja, pan geotermal. <a href="https://vogafjos.is" target="_blank">vogafjos.is</a></p></div><div class="acc-price is">120-180€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Siglo Hotel</h4><p>Siglufjordur. Boutique + spa. <a href="https://siglohotel.is" target="_blank">siglohotel.is</a></p></div><div class="acc-price is">160-250€</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Hotel Aldan</h4><p>Seydisfjordur. Siglo XIX. <a href="https://hotelaldan.is" target="_blank">hotelaldan.is</a></p></div><div class="acc-price is">130-200€</div></div>
+
+    <h3 style="margin:24px 0 14px;">Opcion Campervan</h3>
+    <div class="acc-card"><div class="acc-info"><h4>Cozy Campers</h4><p>Camas calefactadas. <a href="https://cozycampers.is" target="_blank">cozycampers.is</a></p></div><div class="acc-price is">140-240€/dia</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>McRent</h4><p>Motorhome grande. <a href="https://mcrent.eu/en" target="_blank">mcrent.eu</a></p></div><div class="acc-price is">220-340€/dia</div></div>
+    <div class="acc-card"><div class="acc-info"><h4>Happy Campers</h4><p>Balance calidad/precio. <a href="https://happycampers.is" target="_blank">happycampers.is</a></p></div><div class="acc-price is">Variable</div></div>
+    <div class="day-tip" style="margin-top:14px;">Recomendacion: hibrida 12 noches van + 4 noches hotel. Comparador: <a href="https://motorhomerepublic.com/iceland" target="_blank">motorhomerepublic.com</a></div>
+    </div>
+  </div>
+
+  <!-- Logistics -->
+  <div class="section" id="is-logistics">
+    <div class="section-tag fade-in">Logistica</div>
+    <h2 class="fade-in">Lo practico</h2>
+
+    <div class="log-grid fade-in">
+      <div class="log-card"><h4>Vuelos</h4><p>300-700€ pp. Icelandair o PLAY directo.</p></div>
+      <div class="log-card"><h4>Visado</h4><p>DNI espanol suficiente. Sin tramites.</p></div>
+      <div class="log-card"><h4>eSIM</h4><p>Airalo 10GB ~18$.</p></div>
+      <div class="log-card"><h4>Dinero</h4><p>Cashless total. Chip+PIN en todas partes.</p></div>
+      <div class="log-card"><h4>Seguro</h4><p>IATI o Heymondo, ~80€ pp.</p></div>
+      <div class="log-card"><h4>Apps esenciales</h4><p>Road.is (carreteras), Vedur.is (meteo), SafeTravel.is, Google Maps offline.</p></div>
+    </div>
+  </div>
+
+  <!-- Budget -->
+  <div class="section" id="is-budget">
+    <div class="section-tag fade-in">Presupuesto</div>
+    <h2 class="fade-in">Desglose para 2 personas</h2>
+
+    <div class="grid2 fade-in">
+      <div>
+        <h3 style="margin-bottom:12px;">Guesthouses: ~8.000€</h3>
+        <table class="budget-table">
+          <tr><th>Concepto</th><th>Rango</th></tr>
+          <tr><td>Vuelos x2</td><td>600 - 1.400€</td></tr>
+          <tr><td>Alojamiento 15 noches</td><td>2.100 - 3.750€</td></tr>
+          <tr><td>Coche alquiler</td><td>1.200 - 2.000€</td></tr>
+          <tr><td>Gasolina</td><td>400 - 600€</td></tr>
+          <tr><td>Comida</td><td>1.200 - 2.000€</td></tr>
+          <tr><td>Actividades</td><td>400 - 700€</td></tr>
+          <tr><td>eSIM + seguro</td><td>200 - 350€</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3 style="margin-bottom:12px;">Campervan hibrida: ~7.000€</h3>
+        <table class="budget-table">
+          <tr><th>Concepto</th><th>Rango</th></tr>
+          <tr><td>Vuelos x2</td><td>600 - 1.400€</td></tr>
+          <tr><td>Van 12 noches</td><td>1.680 - 2.880€</td></tr>
+          <tr><td>Hotel 4 noches</td><td>500 - 800€</td></tr>
+          <tr><td>Gasolina</td><td>400 - 600€</td></tr>
+          <tr><td>Comida</td><td>800 - 1.400€</td></tr>
+          <tr><td>Actividades</td><td>400 - 700€</td></tr>
+          <tr><td>eSIM + seguro</td><td>200 - 350€</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== COMPARAR ==================== -->
+<div id="view-comparar" class="view">
+  <div class="section">
+    <div class="section-tag fade-in">Comparativa</div>
+    <h2 class="fade-in">Japon vs Islandia</h2>
+    <p class="intro fade-in">Los numeros lado a lado para que la decision sea facil.</p>
+
+    <!-- Comparison table -->
+    <table class="comp-table fade-in">
+      <tr><th>Categoria</th><th>Japon</th><th>Islandia</th></tr>
+      <tr><td>Duracion</td><td>13 dias completos</td><td>15 dias completos</td></tr>
+      <tr><td>Vuelos (pp)</td><td>650 - 1.200€</td><td>300 - 700€</td></tr>
+      <tr><td>Presupuesto total</td><td>~7.000€</td><td>~7.000 - 8.000€</td></tr>
+      <tr><td>Transporte</td><td>Trenes (0h conduccion)</td><td>Coche (~50h conduccion)</td></tr>
+      <tr><td>Clima agosto</td><td>28-33°C, humedo</td><td>8-14°C, impredecible</td></tr>
+      <tr><td>Comida</td><td>Increible, 3-40€/plato</td><td>Limitada, cara</td></tr>
+      <tr><td>Idioma</td><td>Barrera (apps ayudan)</td><td>Todos hablan ingles</td></tr>
+      <tr><td>Dinero</td><td>Cash + IC Card</td><td>100% cashless</td></tr>
+      <tr><td>Visado</td><td>Sin visado (Visit Japan Web)</td><td>DNI espanol</td></tr>
+    </table>
+
+    <!-- Visual bars -->
+    <h3 class="fade-in" style="margin-top:48px;margin-bottom:20px;">Quien gana en cada categoria</h3>
+
+    <div class="comp-bars fade-in">
+      <div class="comp-row">
+        <span class="comp-label">Gastronomia</span>
+        <div class="comp-track"><div class="comp-jp" style="width:88%">88%</div><div class="comp-is" style="width:12%">12%</div></div>
+      </div>
+      <div class="comp-row">
+        <span class="comp-label">Clima</span>
+        <div class="comp-track"><div class="comp-jp" style="width:25%">25%</div><div class="comp-is" style="width:75%">75%</div></div>
+      </div>
+      <div class="comp-row">
+        <span class="comp-label">Costo total</span>
+        <div class="comp-track"><div class="comp-jp" style="width:65%">65%</div><div class="comp-is" style="width:35%">35%</div></div>
+      </div>
+      <div class="comp-row">
+        <span class="comp-label">Romantico</span>
+        <div class="comp-track"><div class="comp-jp" style="width:80%">80%</div><div class="comp-is" style="width:20%">20%</div></div>
+      </div>
+      <div class="comp-row">
+        <span class="comp-label">Naturaleza</span>
+        <div class="comp-track"><div class="comp-jp" style="width:20%">20%</div><div class="comp-is" style="width:80%">80%</div></div>
+      </div>
+      <div class="comp-row">
+        <span class="comp-label">Ritmo lento</span>
+        <div class="comp-track"><div class="comp-jp" style="width:75%">75%</div><div class="comp-is" style="width:25%">25%</div></div>
+      </div>
+      <div class="comp-row">
+        <span class="comp-label">Estilo Monocle</span>
+        <div class="comp-track"><div class="comp-jp" style="width:85%">85%</div><div class="comp-is" style="width:15%">15%</div></div>
+      </div>
+      <div class="comp-row">
+        <span class="comp-label">Novedad</span>
+        <div class="comp-track"><div class="comp-jp" style="width:55%">55%</div><div class="comp-is" style="width:45%">45%</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Moments -->
+  <div class="section">
+    <div class="section-tag fade-in">Para Irene y Victor</div>
+    <h2 class="fade-in">7 momentos que recordareis siempre</h2>
+
+    <div class="fade-in">
+    <div class="moment">
+      <div class="moment-num">1</div>
+      <div><h4>Miyajima al atardecer, solos</h4><p>Ryokan Iwaso. Los turistas se van a las 5pm. La isla entera para vosotros. Cena en tatami. Onsen. Torii iluminado de noche.</p><div class="when">31 agosto</div></div>
+    </div>
+    <div class="moment">
+      <div class="moment-num">2</div>
+      <div><h4>Onsen privado en Hakone</h4><p>Vista a montanas al atardecer. Bano juntos, cerveza fria. El primer momento de pausa real del viaje.</p><div class="when">23 agosto</div></div>
+    </div>
+    <div class="moment">
+      <div class="moment-num">3</div>
+      <div><h4>Cenar sobre el rio en Kyoto</h4><p>Pontocho kawadoko. Terrazas de madera sobre el rio Kamogawa. Solo en verano. Solo al atardecer.</p><div class="when">26 agosto</div></div>
+    </div>
+    <div class="moment">
+      <div class="moment-num">4</div>
+      <div><h4>Fushimi Inari a las 6:30am</h4><p>Miles de torii naranjas. Casi solos. La luz de la manana entre las puertas.</p><div class="when">25 agosto</div></div>
+    </div>
+    <div class="moment">
+      <div class="moment-num">5</div>
+      <div><h4>Gion al anochecer</h4><p>El barrio de las geishas cuando se encienden las linternas. Pasear sin prisa.</p><div class="when">24 agosto</div></div>
+    </div>
+    <div class="moment">
+      <div class="moment-num">6</div>
+      <div><h4>Ceremonia del te</h4><p>Media hora de calma absoluta. Despues de dias de caminar, el silencio.</p><div class="when">27 agosto</div></div>
+    </div>
+    <div class="moment">
+      <div class="moment-num">7</div>
+      <div><h4>Ultimo sushi omakase</h4><p>Barra de sushi en Tokyo. La ultima noche. El chef elige. Vosotros disfrutais.</p><div class="when">1 septiembre</div></div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Concerns -->
+  <div class="section">
+    <div class="section-tag fade-in">Preocupaciones</div>
+    <h2 class="fade-in">Respuestas directas</h2>
+
+    <div class="fade-in">
+    <div class="concern">
+      <h4>"Agosto es demasiado calor"</h4>
+      <div class="ans">AC en todo. Estrategia: aire libre temprano, AC mediodia, retomar atardecer. Post-Obon bajan precios.</div>
+    </div>
+    <div class="concern">
+      <h4>"13 dias no son suficientes"</h4>
+      <div class="ans">Es la ruta clasica recomendada. 3 tardes libres incluidas. No es un sprint.</div>
+    </div>
+    <div class="concern">
+      <h4>"Y si nos arrepentimos de Islandia?"</h4>
+      <div class="ans">Islandia es mejor en junio/septiembre de otro ano. El yen debil de 2026 puede no durar. Este es el momento de Japon.</div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Final recommendation -->
+  <div class="section">
+    <div class="final-box fade-in">
+      <div class="flag">&#127471;&#127477;</div>
+      <h3>Japon gana 6 de 8</h3>
+      <p>Gastronomia, costo, romantico, ritmo lento, estilo Monocle y novedad. Islandia gana en clima y naturaleza, pero eso lo tendreis otro ano.</p>
+      <div class="final-checks">
+        <div><span>&#10003;</span> Mejor comida del mundo a precios accesibles</div>
+        <div><span>&#10003;</span> Yen debil = mas valor por euro</div>
+        <div><span>&#10003;</span> Cero conduccion, todo en tren</div>
+        <div><span>&#10003;</span> Momentos romanticos unicos (ryokan, onsen, kawadoko)</div>
+        <div><span>&#10003;</span> Islandia esperara. El yen debil, quiza no.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">I&V <span>2026</span></div>
+  <p>Hecho con carino para Irene y Victor.</p>
+</footer>
+
+<script>
+// SPA Router
+function navigate(view) {
+  if (view) {
+    window.location.hash = view;
+  } else {
+    history.pushState(null, '', window.location.pathname);
+    showView('home');
+  }
+}
+
+function showView(id) {
+  document.querySelectorAll('.view').forEach(v => {
+    v.classList.remove('active');
+  });
+  const target = document.getElementById('view-' + id);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo(0, 0);
+    // Re-trigger animations
+    setTimeout(() => {
+      target.querySelectorAll('.fade-in').forEach(el => {
+        el.classList.remove('visible');
+      });
+      observeAll();
+    }, 50);
+  }
+  // Update nav
+  const backBtn = document.querySelector('.nav-back');
+  const navLinks = document.querySelector('.nav-links');
+  if (id === 'home') {
+    backBtn.style.display = 'none';
+    navLinks.style.display = '';
+  } else {
+    backBtn.style.display = 'block';
+    navLinks.style.display = '';
+  }
+  // Update active link
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const activeLink = document.querySelector('.nav-links a[href="#' + id + '"]');
+  if (activeLink) activeLink.classList.add('active');
+}
+
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash.slice(1);
+  showView(hash || 'home');
+});
+
+// Day toggle
+function toggleDay(el) {
+  el.classList.toggle('open');
+}
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+function observeAll() {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+  });
+}
+
+// Init
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.slice(1);
+  showView(hash || 'home');
+  observeAll();
+});
+</script>
+</body>
+</html>
