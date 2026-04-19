@@ -27,47 +27,55 @@
 <div id="view-home" class="view">
   <div class="hero-home fade-in">
     <h1>Irene & Victor<br>Verano 2026</h1>
-    <p class="sub">18 agosto &mdash; 3 septiembre &middot; 5 destinos, una decision</p>
+    <p class="sub">Verano 2026: Elegimos Islandia. Vamos en motorhome 15 dias.</p>
   </div>
-  <div class="dest-cards">
-    <div class="dest-card fade-in" onclick="navigate('japon')">
+
+  <div class="featured-dest fade-in">
+    <div class="featured-card" onclick="navigate('islandia')">
+      <img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?w=1600&h=900&fit=crop" alt="Islandia">
+      <div class="label">LA ELEGIDA</div>
+      <div class="overlay">
+        <h2>Islandia</h2>
+        <p>15 dias en motorhome. Ring Road + Westfjords. Hotel-Van-Hotel.</p>
+        <span class="cta">Ver detalles &rarr;</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="alt-dests-title fade-in">Tambien consideramos</h3>
+  <div class="alt-dests">
+    <div class="alt-dest-card fade-in" onclick="navigate('japon')">
       <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=600&fit=crop" alt="Japon">
-      <div class="dest-card-body">
+      <div class="overlay">
         <h3>Japon</h3>
-        <p>13 dias, 5 ciudades, 0h conduccion, ~7.000 EUR</p>
+        <p>13 dias &middot; 5 ciudades</p>
       </div>
     </div>
-    <div class="dest-card fade-in" onclick="navigate('islandia')">
-      <img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?w=1200&h=600&fit=crop" alt="Islandia">
-      <div class="dest-card-body">
-        <h3>Islandia</h3>
-        <p>15 dias, Ring Road + Westfjords, ~50h conduccion, ~7.500 EUR</p>
-      </div>
-    </div>
-    <div class="dest-card fade-in" onclick="navigate('sudafrica')">
+    <div class="alt-dest-card fade-in" onclick="navigate('sudafrica')">
       <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&h=600&fit=crop" alt="Sudafrica">
-      <div class="dest-card-body">
+      <div class="overlay">
         <h3>Sudafrica</h3>
-        <p>14 dias, Cape Town + Kruger + Vic Falls, ~7.500 EUR</p>
+        <p>14 dias &middot; Cape Town + Kruger</p>
       </div>
     </div>
-    <div class="dest-card fade-in" onclick="navigate('corea')">
+    <div class="alt-dest-card fade-in" onclick="navigate('corea')">
       <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?w=1200&h=600&fit=crop" alt="Corea del Sur">
-      <div class="dest-card-body">
+      <div class="overlay">
         <h3>Corea del Sur</h3>
-        <p>13 dias, 4 ciudades, 0h conduccion, ~5.000 EUR</p>
+        <p>13 dias &middot; 4 ciudades</p>
       </div>
     </div>
-    <div class="dest-card fade-in" onclick="navigate('turquia')">
+    <div class="alt-dest-card fade-in" onclick="navigate('turquia')">
       <img src="https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?w=1200&h=600&fit=crop" alt="Turquia">
-      <div class="dest-card-body">
+      <div class="overlay">
         <h3>Turquia</h3>
-        <p>14 dias, Estambul + Capadocia + costa, ~4.000 EUR</p>
+        <p>14 dias &middot; Estambul + Capadocia</p>
       </div>
     </div>
   </div>
+
   <div class="compare-btn-wrap fade-in">
-    <button class="compare-btn" onclick="navigate('comparar')">Comparar los cinco destinos</button>
+    <button class="compare-btn" onclick="navigate('comparar')">Ver por que Islandia</button>
   </div>
 </div>
 
@@ -515,16 +523,84 @@
     <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1200&h=600&fit=crop" alt="Islandia">
     <div class="hero-dest-text">
       <h1>Islandia</h1>
-      <p>18 agosto &mdash; 3 septiembre &middot; 15 dias completos</p>
+      <p>18 agosto &mdash; 3 septiembre &middot; 15 dias &middot; Motorhome + Ring Road + Westfjords</p>
     </div>
   </div>
   <div class="container">
-    <div class="stats fade-in">
-      <div class="stat"><div class="stat-val is">15</div><div class="stat-label">dias</div></div>
-      <div class="stat"><div class="stat-val is">Ring Road</div><div class="stat-label">ruta</div></div>
-      <div class="stat"><div class="stat-val is">~50h</div><div class="stat-label">conduccion</div></div>
+    <div class="stats5 fade-in">
+      <div class="stat"><div class="stat-val is">15 dias</div><div class="stat-label">duracion</div></div>
+      <div class="stat"><div class="stat-val is">Ring Road + Westfjords</div><div class="stat-label">ruta</div></div>
+      <div class="stat"><div class="stat-val is">McRent grande</div><div class="stat-label">motorhome</div></div>
+      <div class="stat"><div class="stat-val is">~1.400 km</div><div class="stat-label">distancia</div></div>
       <div class="stat"><div class="stat-val is">~7.500&euro;</div><div class="stat-label">presupuesto</div></div>
     </div>
+
+    <div class="section">
+      <h2 class="section-title fade-in">El Plan</h2>
+      <div class="plan-timeline fade-in">
+        <div class="plan-card">
+          <span class="plan-tag hotel">Hotel</span>
+          <h4>D1 &mdash; 18 ago</h4>
+          <p>Llegada. Sand Hotel Reykjavik. Descanso tras vuelo.</p>
+        </div>
+        <div class="plan-card">
+          <span class="plan-tag van">Motorhome</span>
+          <h4>D2-D14 &mdash; 19 ago a 1 sep</h4>
+          <p>13 noches McRent. Ring Road completa + Westfjords.</p>
+        </div>
+        <div class="plan-card">
+          <span class="plan-tag hotel">Hotel</span>
+          <h4>D15 &mdash; 2 sep</h4>
+          <p>Entrega van. Sand Hotel ultima noche. Vuelo 3 sep.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title fade-in">El Motorhome</h2>
+      <div class="log-grid">
+        <div class="log-card fade-in">
+          <h4>McRent Iceland</h4>
+          <p><a href="https://mcrent.eu" target="_blank">mcrent.eu</a>. Dethleffs premium, bano y ducha propios, kit cocina, calefaccion, kilometraje ilimitado. Pickup Keflavik. 220-340&euro;/dia.</p>
+        </div>
+        <div class="log-card fade-in">
+          <h4>SAAP obligatorio</h4>
+          <p>Sand &amp; Ash Protection. Cubre dano de ceniza volcanica y arena. Motorhomes tienen mas superficie = mas riesgo. Se agrega al reservar (no despues). ~350&euro; total.</p>
+        </div>
+        <div class="log-card fade-in">
+          <h4>Alternativas</h4>
+          <p>Happy Campers premium (<a href="https://happycampers.is" target="_blank">happycampers.is</a>, incluye gas 12 dias). Kuku Campers (<a href="https://kukucampers.is" target="_blank">kukucampers.is</a>, islandes). CampEasy (familia, 10+ anos).</p>
+        </div>
+        <div class="log-card fade-in">
+          <h4>Extras a sumar</h4>
+          <p>GPS Garmin. Bike rack. Kit cocina superior. Mesa+sillas exterior. Solar panel opcional (no necesario agosto).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title fade-in">Reglas del motorhome</h2>
+      <div class="log-grid">
+        <div class="log-card fade-in">
+          <h4>Acampada libre PROHIBIDA</h4>
+          <p>Desde 2015. Multas 50.000+ ISK (~330&euro;). Solo campings designados: <a href="https://tjalda.is" target="_blank">tjalda.is</a> + <a href="https://parka.is" target="_blank">parka.is</a>.</p>
+        </div>
+        <div class="log-card fade-in">
+          <h4>Nueva tasa kilometrica 2026</h4>
+          <p>6.95 ISK/km en TODOS los vehiculos. Total estimado ruta: ~70&euro;. Reemplaza impuesto combustible.</p>
+        </div>
+        <div class="log-card fade-in">
+          <h4>F-roads PROHIBIDAS</h4>
+          <p>Para motorhomes. Sin excepcion. Nos limitamos a Ring Road + rutas pavimentadas. Westfjords todas OK en verano.</p>
+        </div>
+        <div class="log-card fade-in">
+          <h4>Seguridad obligatoria</h4>
+          <p><a href="https://road.is" target="_blank">road.is</a> y <a href="https://vedur.is" target="_blank">vedur.is</a> a diario. Viento puede tumbar puerta del van. Aparcar cara al viento. No conducir sobre musgo/lava = delito.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title fade-in" style="max-width:var(--max);margin:0 auto;padding:24px 24px 12px;">Recorrido: Reykjavik &rarr; Snaefellsnes &rarr; Westfjords &rarr; Norte &rarr; Este &rarr; Sur &rarr; Reykjavik. 1.400 km en 15 dias.</h2>
 
     <div class="route-map fade-in">
       <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
@@ -549,13 +625,20 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D1</div>
-          <div class="day-info"><h3>Llegada + Reykjavik</h3><div class="day-date">18 agosto</div></div>
+          <div class="day-info"><h3>Llegada + Reykjavik</h3><div class="day-date">18 ago</div></div>
+          <span class="day-tag hotel">Hotel</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk is"><div class="blk-tag is">Relax</div><p>Blue Lagoon o Sky Lagoon (60-90&#8364; pp)</p></div>
-          <div class="blk jp"><div class="blk-tag jp">Ciudad</div><p>Reykjavik: Hallgrimskirkja, Harpa</p></div>
-          <div class="blk rom"><div class="blk-tag rom">Cena</div><p>Dill (unico Michelin, dillrestaurant.is)</p></div>
+          <div class="day-km">Sin conduccion &middot; 45 min Flybus aeropuerto a ciudad</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Aterrizaje Keflavik. <a href="https://flybus.is" target="_blank">Flybus</a> a Reykjavik, 45 min, 35&euro; pp. Alternativa: taxi ~80&euro;.</p></div>
+          <div class="blk is"><div class="blk-tag is">Hotel</div><p><a href="https://sand-hotel.is" target="_blank">Sand Hotel by Keahotels</a>, minimalista escandinavo, 140-200&euro;/noche. Alternativa: <a href="https://kexrvk.is" target="_blank">Kex Hostel</a> (ex-fabrica galletas, 100-160&euro;).</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p><a href="https://reykjavikroasters.is" target="_blank">Reykjavik Roasters</a>. Cafe de especialidad pionero desde 2008. Ubicaciones Karastigur y Brautarholt.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p><a href="https://kraum.is" target="_blank">Kraum</a>. Casa de 1762, la mas antigua de Reykjavik. 200+ artesanos islandeses: ceramica, textiles, joyeria.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Kiosk (Laugavegur). Cooperativa de 5 disenadores de moda islandeses.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p><a href="https://12tonar.is" target="_blank">12 Tonar</a>. Tienda de discos legendaria + sello musical.</p></div>
+          <div class="blk rom"><div class="blk-tag rom">Cena</div><p><a href="https://dillrestaurant.is" target="_blank">Dill</a> si reservaron con meses, 120-150&euro; pp. O <a href="https://maturogdrykkur.is" target="_blank">Matur og Drykkur</a> mas accesible, 50-70&euro; pp.</p></div>
+          <div class="day-tip">Ducha larga. Cama grande. Jet lag no fuerza. Desayuno Sandholt (panaderia 1920) manana temprano antes de recoger van.</div>
         </div></div>
       </div>
 
@@ -563,12 +646,17 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D2</div>
-          <div class="day-info"><h3>Golden Circle</h3><div class="day-date">19 agosto</div></div>
+          <div class="day-info"><h3>Recogida van + Reykjanes + Secret Lagoon</h3><div class="day-date">19 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Clasico</div><p>Thingvellir, Geysir, Gullfoss</p></div>
-          <div class="blk is"><div class="blk-tag is">Opcional</div><p>Snorkel Silfra (~130&#8364;, dive.is)</p></div>
+          <div class="day-km">~150 km &middot; 3h de conduccion</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>9am. Flybus a Keflavik airport. Recogida McRent. Orientacion al vehiculo 30 min.</p></div>
+          <div class="blk is"><div class="blk-tag is">Provisiones</div><p>Bonus (cerdito rosa) para 13 dias. ~250&euro;. Abre 11am. Alternativa: Kronan (abre 8am, mejor seleccion).</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Seltun / Gunnuhver (Reykjanes). Pozas de barro multicolor. Menos turistico que Blue Lagoon. Gratis.</p></div>
+          <div class="blk is"><div class="blk-tag is">Relax</div><p><a href="https://secretlagoon.is" target="_blank">Secret Lagoon / Gamla Laugin</a>. Fludir. Piscina termal de 1891, la mas antigua de Islandia. 30-40&deg;C. 30&euro; pp.</p></div>
+          <div class="day-tip">Camping Thingvellir National Park o Borgarnes. Primera noche en van = probar todos los sistemas (calefaccion, agua, etc).</div>
         </div></div>
       </div>
 
@@ -576,11 +664,19 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D3</div>
-          <div class="day-info"><h3>Cascadas + Reynisfjara</h3><div class="day-date">20 agosto</div></div>
+          <div class="day-info"><h3>Snaefellsnes peninsula</h3><div class="day-date">20 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Clasico</div><p>Seljalandsfoss + Skogafoss + Reynisfjara (playa negra). Noche Vik.</p></div>
+          <div class="day-km">~200 km &middot; 4h conduccion + paradas</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Kirkjufell (montana iconica cono). Aparcar + caminar a Kirkjufellsfoss.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Budir. Iglesia negra de madera, la mas fotografiada de Islandia. Contraste con glaciar Snaefellsjokull.</p></div>
+          <div class="blk is"><div class="blk-tag is">Fauna</div><p>Ytri Tunga Beach. Colonia de focas (harbor + grey seal), pico agosto con marea baja.</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Arnarstapi + Hellnar. Acantilados con formaciones basalticas. Caminata 2.5 km entre los dos.</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Djupalonssandur. Playa de guijarros negros con restos del naufragio del Epine (1948).</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Narfeyrarstofa (Stykkisholmur). Mariscos en casa historica junto al puerto.</p></div>
+          <div class="day-tip">Camping <a href="https://grundarfjordur.is" target="_blank">Grundarfjordur</a> o Hellissandur. Vista Kirkjufell al atardecer desde el camping.</div>
         </div></div>
       </div>
 
@@ -588,11 +684,16 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D4</div>
-          <div class="day-info"><h3>Cueva de hielo + Svartifoss</h3><div class="day-date">21 agosto</div></div>
+          <div class="day-info"><h3>Ferry Westfjords + Dynjandi</h3><div class="day-date">21 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk is"><div class="blk-tag is">Aventura</div><p>Cueva hielo Katla (~90&#8364;). Fjadrargljufur. Svartifoss (Skaftafell).</p></div>
+          <div class="day-km">ferry 2h30 + 100 km</div>
+          <div class="blk jp"><div class="blk-tag jp">Transporte</div><p>Ferry Baldur (<a href="https://seatours.is" target="_blank">seatours.is</a>) Stykkisholmur a Brjanslaekur. 2h30. Van+2pax ~70&euro;. Alternativa conducir: +4h extra.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Dynjandi. Cascada en 7 niveles, 100m total. La mas bella de Westfjords. Parking gratis, caminata 15 min.</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Playa Raudasandur. Arena roja-dorada (unica en Islandia). Focas tomando el sol. Acceso por gravel road.</p></div>
+          <div class="day-tip">Camping Breidavik (al pie de Latrabjarg, <a href="https://breidavik.is" target="_blank">breidavik.is</a>) o Patreksfjordur. Llegar antes del atardecer para acampar.</div>
         </div></div>
       </div>
 
@@ -600,12 +701,18 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D5</div>
-          <div class="day-info"><h3>Jokulsarlon + Diamond Beach</h3><div class="day-date">22 agosto</div></div>
+          <div class="day-info"><h3>Latrabjarg puffins + Isafjordur</h3><div class="day-date">22 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Clasico</div><p>Jokulsarlon + zodiac (~80&#8364;) + Diamond Beach</p></div>
-          <div class="blk rom"><div class="blk-tag rom">Cena</div><p>Langosta en Pakkhus, Hofn</p></div>
+          <div class="day-km">~180 km &middot; 4h conduccion costera</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Latrabjarg AMANECER. 14 km de acantilados, 440m de altura. Millones de aves marinas. PUFFINS hasta mid-agosto (ultimos dias de la temporada). No los toque, pero se puede estar a 1 metro.</p></div>
+          <div class="blk is"><div class="blk-tag is">Ruta</div><p>Ruta costera de regreso, fiordo tras fiordo. Cascadas sin nombre cada 2 km.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Heimabyggd (Adalstraeti 22b, Isafjordur). Cafe + libreria + pan sourdough diario. Centro cultural local. Telefono +354 774 2596.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Tjoruhusid. Pescado del dia en casa de madera. Pequeno, reservar.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Edinborg Cultural House. Arte + eventos locales.</p></div>
+          <div class="day-tip">Camping Tungudalur, Isafjordur (<a href="https://tungudalur.is" target="_blank">tungudalur.is</a>). Valle bosque, full facilities, rarisimo bosque en Islandia.</div>
         </div></div>
       </div>
 
@@ -613,12 +720,16 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D6</div>
-          <div class="day-info"><h3>Stokksnes + Seydisfjordur</h3><div class="day-date">23 agosto</div></div>
+          <div class="day-info"><h3>Hot Pots Drangsnes + traslado norte</h3><div class="day-date">23 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Paisaje</div><p>Stokksnes/Vestrahorn. Seydisfjordur.</p></div>
-          <div class="blk is"><div class="blk-tag is">Relax</div><p>Vok Baths (~40&#8364;). ~4h conduccion.</p></div>
+          <div class="day-km">~280 km &middot; 5h conduccion</div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Manana Isafjordur. Visitar Gamla Bakarrid (panaderia tradicional).</p></div>
+          <div class="blk is"><div class="blk-tag is">Imperdible</div><p>Hot Pots Drangsnes. 3 piscinas termales GRATIS a orilla del fiordo. Cambiarse en la gasolinera enfrente. Experiencia 100% local.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Hvitserkur. Roca-elefante de basalto en el mar. Focas en la playa Osar.</p></div>
+          <div class="day-tip">Camping Hvammstangi (focas museum pueblo) o Blonduos. Pueblos pequenos, ambiente noche calmo.</div>
         </div></div>
       </div>
 
@@ -626,12 +737,19 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D7</div>
-          <div class="day-info"><h3>Dettifoss + Myvatn</h3><div class="day-date">24 agosto</div></div>
+          <div class="day-info"><h3>Siglufjordur + Hofsos + Akureyri</h3><div class="day-date">24 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Clasico</div><p>Dettifoss. Myvatn: Hverir, pseudocrateres, Grjotagja.</p></div>
-          <div class="blk is"><div class="blk-tag is">Relax</div><p>Earth Lagoon (~45&#8364;)</p></div>
+          <div class="day-km">~200 km &middot; 4h con desvios</div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Kolugljufur Canyon. 7 cascadas escondidas. VER desde el puente, ATENCION resbaloso y peligroso (top 10 mas peligrosos Islandia).</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Trollaskagi peninsula. Paisaje montanoso espectacular.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Siglufjordur. Pueblo en el fiordo mas bonito del norte. Casas pastel.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Herring Era Museum (<a href="https://sild.is" target="_blank">sild.is</a>). Premio Museo Europeo. Edificio noruego de 1907. Hist maritime.</p></div>
+          <div class="blk is"><div class="blk-tag is">Relax</div><p>Piscina infinity Hofsos. Vista al fiordo e isla Drangey. 8&euro; entrada. 30-31&deg;C.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Cena en Akureyri: Rub23 (sushi) o Bautinn (cordero clasico).</p></div>
+          <div class="day-tip">Camping Hamrar Akureyri. Piscina geotermal al lado. Bosque unico en Islandia.</div>
         </div></div>
       </div>
 
@@ -639,11 +757,20 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D8</div>
-          <div class="day-info"><h3>Husavik ballenas + Godafoss</h3><div class="day-date">25 agosto</div></div>
+          <div class="day-info"><h3>Akureyri manana + Myvatn</h3><div class="day-date">25 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk is"><div class="blk-tag is">Aventura</div><p>Husavik ballenas (~70&#8364;, northsailing.is). Godafoss. Akureyri.</p></div>
+          <div class="day-km">~100 km &middot; 2h + explorar</div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Akureyri manana. Kaffi Ilmur (mejor cafe norte). Brynja (helados soft-serve desde 1939). Blaa Kannan (cafe azul iconico, personajes del pueblo).</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Jardines Botanicos Akureyri. Los mas al norte del mundo. Gratis.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Godafoss ("cascada de los dioses") en la ruta.</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Dimmuborgir. Formaciones lavicas negras. Caminata 1h entre cuevas de lava.</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Grjotagja. Cueva con poza termal turquesa (solo mirar, agua inestable). Game of Thrones.</p></div>
+          <div class="blk is"><div class="blk-tag is">Relax</div><p>Myvatn Nature Baths. Menos turistico que Blue Lagoon. 40&euro; pp, 3h de relax.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p><a href="https://vogafjos.is" target="_blank">Vogafjos</a>. Pan hveraubraud horneado bajo tierra geotermal 24h. Cafe granja.</p></div>
+          <div class="day-tip">Camping Reykjahlid Myvatn. Lake view, duchas privadas gratis.</div>
         </div></div>
       </div>
 
@@ -651,11 +778,18 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D9</div>
-          <div class="day-info"><h3>Trollaskagi + Siglufjordur</h3><div class="day-date">26 agosto</div></div>
+          <div class="day-info"><h3>Dettifoss + Husavik ballenas</h3><div class="day-date">26 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Ruta</div><p>Trollaskagi: Siglufjordur (Museo Arenque). Piscina Hofsos (infinity, ~8&#8364;).</p></div>
+          <div class="day-km">~200 km &middot; con barco 6h total</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Dettifoss. La cascada mas potente de Europa. 100m ancho, 45m alto. Rugido que se siente en el pecho.</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Selfoss (vecina menos famosa). Hverir (Namaskard). Pozas de barro burbujeante.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Husavik ballenas (<a href="https://northsailing.is" target="_blank">northsailing.is</a>). 85&euro; pp, 3h, barco de vela tradicional. AGOSTO PICO de jorobadas + minkes. Casi 100% de avistamiento.</p></div>
+          <div class="blk is"><div class="blk-tag is">Relax</div><p><a href="https://geosea.is" target="_blank">GeoSea</a>. Banos geotermales mirando al mar desde acantilado. 38&euro; pp.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p><a href="https://salkarestaurant.is" target="_blank">Salka Restaurant</a>. Cocina local en ex-tienda Husavik.</p></div>
+          <div class="day-tip">Camping Husavik.</div>
         </div></div>
       </div>
 
@@ -663,11 +797,16 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D10</div>
-          <div class="day-info"><h3>Conduccion a Snaefellsnes</h3><div class="day-date">27 agosto</div></div>
+          <div class="day-info"><h3>Asbyrgi + Studlagil</h3><div class="day-date">27 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Ruta</div><p>~5h conduccion. Kirkjufell al atardecer.</p></div>
+          <div class="day-km">~280 km &middot; 5h</div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Asbyrgi. Canon en forma de herradura creado por rio Jokulsa. 1 km largo, 100m alto.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Studlagil canyon. Columnas basalticas hexagonales, descubierto 2018 al represarse un rio. Caminata 2.5 km. Agua turquesa jun-jul, grisacea ago-sep pero igual imponente.</p></div>
+          <div class="blk is"><div class="blk-tag is">Ruta</div><p>Egilsstadir (capital del este). Reponer viveres aqui.</p></div>
+          <div class="day-tip">Camping Egilsstadir (en el bosque Hallormsstadur, bosque mas grande de Islandia).</div>
         </div></div>
       </div>
 
@@ -675,11 +814,20 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D11</div>
-          <div class="day-info"><h3>Peninsula Snaefellsnes</h3><div class="day-date">28 agosto</div></div>
+          <div class="day-info"><h3>Borgarfjordur Eystri + Seydisfjordur</h3><div class="day-date">28 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Clasico</div><p>Snaefellsjokull, Djupalonssandur, Arnarstapi, Budakirkja.</p></div>
+          <div class="day-km">~100 km &middot; 3h por rutas montanosas</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Borgarfjordur Eystri. 10.000 parejas de puffins. Plataformas elevadas a 1 metro de distancia. Ultimos dias temporada (hasta mid-agosto). Pueblo de elfos segun folklore.</p></div>
+          <div class="blk is"><div class="blk-tag is">Ruta</div><p>Seydisfjordur por Route 93. 27 km bajando por la montana con cascadas.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Pueblo noruego con casas pastel. Rainbow Street (calle pintada de arcoiris hacia la iglesia azul).</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Kaffi Raudka. Cafe en ex-fabrica de arenque.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p><a href="https://skaftfell.is" target="_blank">Skaftfell Center for Visual Art</a>. Galeria + cafe + residencia de artistas.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Cena</div><p><a href="https://nordurogaustur.is" target="_blank">Nord Austur Sushi and Bar</a>. Si, sushi aqui. El mejor del pais fuera de Reykjavik.</p></div>
+          <div class="blk is"><div class="blk-tag is">Relax</div><p><a href="https://vokbaths.is" target="_blank">Vok Baths</a>. Piscinas flotantes en el lago Urridavatn. 40&euro; pp.</p></div>
+          <div class="day-tip">Camping Seydisfjordur en el pueblo O volver a Egilsstadir.</div>
         </div></div>
       </div>
 
@@ -687,11 +835,18 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D12</div>
-          <div class="day-info"><h3>Fiordos Oeste: Dynjandi + Isafjordur</h3><div class="day-date">29 agosto</div></div>
+          <div class="day-info"><h3>Vestrahorn + Hofn langosta</h3><div class="day-date">29 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Paisaje</div><p>Dynjandi (7 niveles). Isafjordur. ~5h conduccion.</p></div>
+          <div class="day-km">~260 km &middot; 5h costa este-sur</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Stokksnes / Vestrahorn. Montana de basalto negro con playa. Acceso por Viking Village (9&euro; entrada).</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Ruta costera Ring Road con fiordos uno tras otro.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Hofn. Capital de la langosta islandesa.</p></div>
+          <div class="blk rom"><div class="blk-tag rom">Cena especial</div><p><a href="https://pakkhus.is" target="_blank">Pakkhus</a>. Langosta a la plancha (humar), casa historica del puerto. 60-80&euro; pp. Reservar.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Alternativa</div><p><a href="https://humarhofnin.is" target="_blank">Humarhofnin</a>. Langosta en baguette estilo lobster roll. Mas casual.</p></div>
+          <div class="day-tip">Camping Hofn o Skaftafell (preparar para glaciar manana).</div>
         </div></div>
       </div>
 
@@ -699,12 +854,18 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D13</div>
-          <div class="day-info"><h3>Latrabjarg + Raudisandur</h3><div class="day-date">30 agosto</div></div>
+          <div class="day-info"><h3>Jokulsarlon + Skaftafell</h3><div class="day-date">30 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk is"><div class="blk-tag is">Fauna</div><p>Latrabjarg (puffins). Raudisandur.</p></div>
-          <div class="blk is"><div class="blk-tag is">Relax</div><p>Hot pots Drangsnes (gratis).</p></div>
+          <div class="day-km">~150 km con paradas largas</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Jokulsarlon laguna glaciar AMANECER. Icebergs flotando, focas. Zodiac opcional 80-90&euro; pp (<a href="https://guidetoiceland.is" target="_blank">guidetoiceland.is</a>, reserva previa).</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Diamond Beach. Trozos de iceberg en arena negra como diamantes.</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Fjadrargljufur. Canon de Justin Bieber. 100m profundo. Plataformas miradores.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Skaftafell National Park. Caminata a Svartifoss (cascada con basalto), 1h30 ida/vuelta.</p></div>
+          <div class="blk is"><div class="blk-tag is">Opcional</div><p>Glacier hike con <a href="https://icelandicmountainguides.com" target="_blank">Icelandic Mountain Guides</a>. 100&euro; pp, 3h, crampones incluidos.</p></div>
+          <div class="day-tip">Camping Thakgil (hidden gem, <a href="https://thakgil.is" target="_blank">thakgil.is</a>) entre montanas con hoguera comun. Alternativa: Camping Vik.</div>
         </div></div>
       </div>
 
@@ -712,11 +873,20 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D14</div>
-          <div class="day-info"><h3>Regreso + Hraunfossar</h3><div class="day-date">31 agosto</div></div>
+          <div class="day-info"><h3>Vik + Reynisfjara + Seljalandsfoss</h3><div class="day-date">31 ago</div></div>
+          <span class="day-tag van">Van</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk jp"><div class="blk-tag jp">Ruta</div><p>~5-6h regreso. Deildartunguhver + Hraunfossar. Borgarnes.</p></div>
+          <div class="day-km">~200 km</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Reynisfjara. Playa negra, columnas basalticas, cuevas. ATENCION olas asesinas (sneaker waves), no acercarse al mar.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Dyrholaey. Mirador con puffins hasta mid-ago y roca-arco.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Skogafoss 60m. Subir escaleras para vista desde arriba.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Seljalandsfoss. Se puede caminar DETRAS de la cascada (llevar impermeable).</p></div>
+          <div class="blk is"><div class="blk-tag is">Natural</div><p>Gljufrabui. Cascada escondida 200m al lado de Seljalandsfoss. Se entra por una grieta en la roca, dentro = catedral de agua. Secreto.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>LAVA Centre (Hvolsvollur, <a href="https://lavacentre.is" target="_blank">lavacentre.is</a>). Museo interactivo sobre volcanes islandeses.</p></div>
+          <div class="blk is"><div class="blk-tag is">Relax</div><p>Reykjadalur hot river hike. 1h subida desde Hveragerdi. Banarse en RIO de agua caliente al aire libre. Gratis.</p></div>
+          <div class="day-tip">Camping Hveragerdi o Selfoss. Ultima noche en van.</div>
         </div></div>
       </div>
 
@@ -724,12 +894,71 @@
       <div class="day fade-in" onclick="toggleDay(this)">
         <div class="day-header">
           <div class="day-num is">D15</div>
-          <div class="day-info"><h3>Reykjavik libre + despedida</h3><div class="day-date">1-2 septiembre</div></div>
+          <div class="day-info"><h3>Golden Circle + entrega van</h3><div class="day-date">1 sep</div></div>
+          <span class="day-tag van">Van &rarr; Hotel</span>
           <div class="day-toggle">&#9662;</div>
         </div>
         <div class="day-body"><div class="day-body-inner">
-          <div class="blk"><div class="blk-tag">Libre</div><p>Reykjavik libre 2 dias. Cena de despedida. Vuelo 3 sep.</p></div>
+          <div class="day-km">~300 km incluye entrega</div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Thingvellir (UNESCO). Grieta entre placas tectonicas americana y europea. Se puede caminar entre continentes.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Geysir + Strokkur. El segundo explota cada 5-7 min, 20-30m altura.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Imperdible</div><p>Gullfoss. "Cascada dorada". 32m caida en dos niveles.</p></div>
+          <div class="blk is"><div class="blk-tag is">Practico</div><p>Vaciar aguas grises en dump station. Limpiar interior van. Llenar tanque combustible.</p></div>
+          <div class="blk is"><div class="blk-tag is">Entrega</div><p>4pm. Devolucion McRent en Keflavik. Bus/taxi a Reykjavik.</p></div>
+          <div class="blk is"><div class="blk-tag is">Hotel</div><p>Check-in Sand Hotel o <a href="https://keahotels.is/hotel-borg" target="_blank">Hotel Borg</a>. Art Deco 1930, icono centro, 200-300&euro;.</p></div>
+          <div class="blk rom"><div class="blk-tag rom">Cena despedida</div><p>Dill si no se hizo el D1. O Fiskmarkadurinn (fusion islandesa-japonesa). O Fjorubordid en Stokkseyri (humarsupa la mejor del pais, vale la pena el desvio).</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle shopping</div><p>Geysir (ropa lana y outdoor, Icelandic design). Aurum by Gudbjorg (joyeria). 66&deg;North (ropa tecnica islandesa).</p></div>
         </div></div>
+      </div>
+
+      <!-- D16 -->
+      <div class="day fade-in" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num is">D16</div>
+          <div class="day-info"><h3>Reykjavik libre + vuelo</h3><div class="day-date">2-3 sep</div></div>
+          <span class="day-tag hotel">Hotel</span>
+          <div class="day-toggle">&#9662;</div>
+        </div>
+        <div class="day-body"><div class="day-body-inner">
+          <div class="day-km">0 km</div>
+          <div class="blk is"><div class="blk-tag is">Manana</div><p>Desayuno <a href="https://sandholt.is" target="_blank">Sandholt</a>. Panaderia desde 1920.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Marshall House. Olafur Eliasson studio + galerias + cafe.</p></div>
+          <div class="blk sa"><div class="blk-tag sa">Monocle</div><p>Hafnarhus (museo arte contemporaneo). Laugavegur shopping.</p></div>
+          <div class="blk is"><div class="blk-tag is">Comprar para casa</div><p>Skyr Isey (supermercado), chocolates Omnom (<a href="https://omnom.is" target="_blank">omnom.is</a>), rye bread en panaderia, magnet de la suerte islandes.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Final</div><p>Hallgrimskirkja elevador (~8&euro;). Vista panoramica de Reykjavik desde la torre.</p></div>
+          <div class="blk jp"><div class="blk-tag jp">Vuelo</div><p>2 sep evening o 3 sep. <a href="https://flybus.is" target="_blank">Flybus</a> al aeropuerto (45 min).</p></div>
+        </div></div>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h2 class="section-title fade-in">Tips de comida en motorhome</h2>
+      <div class="food-tips fade-in">
+        <div class="food-tip">
+          <h4>Supermercados</h4>
+          <p>Bonus (cerdito rosa) es el mas barato, 10% menos que otros. Abre 11am. Kronan tiene mejor seleccion y abre 8-9am. Plan: comprar D2 en Reykjavik para 13 dias (~250&euro;). Reponer Akureyri (D7) y Hofn (D12).</p>
+        </div>
+        <div class="food-tip">
+          <h4>Skyr y lacteos</h4>
+          <p>Skyr Isey: fermentado 1100 anos, 12% proteina, mas denso que yogur griego. Probar sabores locales (blueberry, rabarbara). Queso Hofdingi (blanco suave) + mermelada de arandanos silvestres = desayuno islandes.</p>
+        </div>
+        <div class="food-tip">
+          <h4>Rugbraud geotermal</h4>
+          <p>Pan de centeno denso horneado bajo tierra 24h usando calor geotermal. Vogafjos en Myvatn lo hace asi. Supermercado tiene version industrial pero la real solo en Myvatn. Servir con mantequilla + salmon ahumado.</p>
+        </div>
+        <div class="food-tip">
+          <h4>Langosta y mariscos</h4>
+          <p>Humar (langostino islandes) es la experiencia gastronomica del viaje. Mejor en Hofn (capital): Pakkhus (plancha, 60-80&euro; pp) o Humarhofnin (baguette estilo lobster roll, casual 25-35&euro;). Humarsupa (sopa) en cada pueblo costero.</p>
+        </div>
+        <div class="food-tip">
+          <h4>Pylsur (hot dog)</h4>
+          <p>Cordero + cerdo + ternera. Cebolla cruda + crispy + ketchup + mostaza dulce + remoulade. Baejarins Beztu (Reykjavik desde 1937) es el famoso pero hay en cada gasolinera por 4-5&euro;. Experiencia local.</p>
+        </div>
+        <div class="food-tip">
+          <h4>Agua</h4>
+          <p>Tap water islandesa = mejor del mundo. Rellenar botella del grifo o de cualquier arroyo de montana. Sin plastico. No comprar agua embotellada (ofensivo para los islandeses).</p>
+        </div>
       </div>
     </div>
 
@@ -742,26 +971,81 @@
       <h2 class="section-title fade-in">Donde comer y beber</h2>
 
       <div class="curated-group fade-in">
-        <h4>Reykjavik</h4>
+        <h4>Reykjavik &mdash; Cafes</h4>
         <div class="curated-items">
-          <div class="curated-item"><a class="curated-link is-link" href="https://dillrestaurant.is" target="_blank">Dill</a> <span class="curated-detail">unico Michelin</span></div>
-          <div class="curated-item"><a class="curated-link is-link" href="https://grillid.is" target="_blank">Grillid</a></div>
-          <div class="curated-item">Bajarins Beztu <span class="curated-detail">hot dogs</span></div>
-          <div class="curated-item"><a class="curated-link is-link" href="https://reykjavikroasters.is" target="_blank">Reykjavik Roasters</a></div>
-          <div class="curated-item">Kaffi Loki <span class="curated-detail">comida islandesa</span></div>
-          <div class="curated-item">Stofan Cafe</div>
-          <div class="curated-item">Marshall House <span class="curated-detail">arte + cafe</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://reykjavikroasters.is" target="_blank">Reykjavik Roasters</a> <span class="curated-detail">pionero cafe de especialidad desde 2008</span></div>
+          <div class="curated-item">Kaffibrennslan <span class="curated-detail">Laugavegur 20, casa 1884</span></div>
+          <div class="curated-item">Mokka-Kaffi <span class="curated-detail">el mas antiguo desde 1958</span></div>
+          <div class="curated-item">Stofan Cafe <span class="curated-detail">sofas, libros, velas</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://sandholt.is" target="_blank">Sandholt</a> <span class="curated-detail">panaderia 1920</span></div>
+          <div class="curated-item">Braud &amp; Co <span class="curated-detail">croissants, cinnamon rolls</span></div>
+          <div class="curated-item">Kaffibarinn <span class="curated-detail">bar de Damon Albarn</span></div>
         </div>
       </div>
 
       <div class="curated-group fade-in">
-        <h4>Fuera de Reykjavik</h4>
+        <h4>Reykjavik &mdash; Diseno / Tiendas</h4>
         <div class="curated-items">
-          <div class="curated-item">Pakkhus <span class="curated-detail">langosta en Hofn</span></div>
-          <div class="curated-item"><a class="curated-link is-link" href="https://vogafjos.is" target="_blank">Vogafjos</a> <span class="curated-detail">granja + cafe</span></div>
-          <div class="curated-item">Tjoruhusid <span class="curated-detail">Isafjordur</span></div>
-          <div class="curated-item">Narfeyrarstofa <span class="curated-detail">Stykkisholmur</span></div>
-          <div class="curated-item">Kaffi Raudka</div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://kraum.is" target="_blank">Kraum</a> <span class="curated-detail">flagship diseno islandes, casa 1762</span></div>
+          <div class="curated-item">Kiosk <span class="curated-detail">cooperativa 5 disenadores</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://geysir.com" target="_blank">Geysir</a> <span class="curated-detail">ropa y lana islandesa</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://66north.com" target="_blank">66&deg;North</a> <span class="curated-detail">ropa tecnica desde 1926</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://12tonar.is" target="_blank">12 Tonar</a> <span class="curated-detail">discos y sello musical</span></div>
+          <div class="curated-item">Aurum by Gudbjorg <span class="curated-detail">joyeria contemporanea</span></div>
+          <div class="curated-item">Lucky Records <span class="curated-detail">vinilos raros</span></div>
+          <div class="curated-item">Mal og Menning <span class="curated-detail">libreria-cafe</span></div>
+        </div>
+      </div>
+
+      <div class="curated-group fade-in">
+        <h4>Reykjavik &mdash; Arte / Cultura</h4>
+        <div class="curated-items">
+          <div class="curated-item"><a class="curated-link is-link" href="https://marshallhouse.is" target="_blank">Marshall House</a> <span class="curated-detail">Olafur Eliasson + 3 galerias + cafe</span></div>
+          <div class="curated-item">Hafnarhus <span class="curated-detail">museo arte contemporaneo</span></div>
+          <div class="curated-item">Hallgrimskirkja <span class="curated-detail">elevador a la torre ~8&euro;</span></div>
+          <div class="curated-item">Harpa <span class="curated-detail">concert hall</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://perlan.is" target="_blank">Perlan</a> <span class="curated-detail">museo + mirador + cueva hielo</span></div>
+        </div>
+      </div>
+
+      <div class="curated-group fade-in">
+        <h4>Reykjavik &mdash; Restaurantes</h4>
+        <div class="curated-items">
+          <div class="curated-item"><a class="curated-link is-link" href="https://dillrestaurant.is" target="_blank">Dill</a> <span class="curated-detail">unico Michelin, 120-150&euro; pp</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://maturogdrykkur.is" target="_blank">Matur og Drykkur</a> <span class="curated-detail">tradicional moderna, 50-70&euro; pp</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://fiskmarkadurinn.is" target="_blank">Fiskmarkadurinn</a> <span class="curated-detail">fusion islandesa-japonesa</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://grillmarkadurinn.is" target="_blank">Grillmarkadurinn</a> <span class="curated-detail">parrilla premium</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://messinn.com" target="_blank">Messinn</a> <span class="curated-detail">pescado casual, 25-40&euro; pp</span></div>
+          <div class="curated-item">Fjorubordid <span class="curated-detail">Stokkseyri, humarsupa top</span></div>
+          <div class="curated-item">Baejarins Beztu <span class="curated-detail">hot dog desde 1937</span></div>
+        </div>
+      </div>
+
+      <div class="curated-group fade-in">
+        <h4>En ruta &mdash; Westfjords y Norte</h4>
+        <div class="curated-items">
+          <div class="curated-item">Heimabyggd <span class="curated-detail">Isafjordur, cafe + libreria + sourdough</span></div>
+          <div class="curated-item">Tjoruhusid <span class="curated-detail">Isafjordur, pescado del dia</span></div>
+          <div class="curated-item">Gamla Bakariid <span class="curated-detail">Isafjordur, panaderia tradicional</span></div>
+          <div class="curated-item">Narfeyrarstofa <span class="curated-detail">Stykkisholmur, mariscos</span></div>
+          <div class="curated-item">Kaffi Ilmur <span class="curated-detail">Akureyri, mejor cafe del norte</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://brynjuis.is" target="_blank">Brynja</a> <span class="curated-detail">Akureyri, helados desde 1939</span></div>
+          <div class="curated-item">Blaa Kannan <span class="curated-detail">Akureyri, cafe azul</span></div>
+          <div class="curated-item">Rub23 <span class="curated-detail">Akureyri, sushi premium</span></div>
+          <div class="curated-item">Bautinn <span class="curated-detail">Akureyri, cordero tradicional</span></div>
+        </div>
+      </div>
+
+      <div class="curated-group fade-in">
+        <h4>En ruta &mdash; Este y Sur</h4>
+        <div class="curated-items">
+          <div class="curated-item">Kaffi Raudka <span class="curated-detail">Seydisfjordur, ex-fabrica de arenque</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://nordurogaustur.is" target="_blank">Nord Austur Sushi</a> <span class="curated-detail">Seydisfjordur, mejor sushi fuera RVK</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://skaftfell.is" target="_blank">Skaftfell Art Center Cafe</a> <span class="curated-detail">Seydisfjordur</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://salkarestaurant.is" target="_blank">Salka Restaurant</a> <span class="curated-detail">Husavik, cocina local</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://vogafjos.is" target="_blank">Vogafjos</a> <span class="curated-detail">Myvatn, pan hveraubraud geotermal</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://pakkhus.is" target="_blank">Pakkhus</a> <span class="curated-detail">Hofn, langosta en casa historica</span></div>
+          <div class="curated-item"><a class="curated-link is-link" href="https://humarhofnin.is" target="_blank">Humarhofnin</a> <span class="curated-detail">Hofn, lobster roll style</span></div>
         </div>
       </div>
     </div>
@@ -769,71 +1053,112 @@
     <!-- ACCOMMODATION ICELAND -->
     <div class="section">
       <h2 class="section-title fade-in">Alojamiento</h2>
+      <h4 class="fade-in" style="font-size:14px;font-weight:700;margin-bottom:12px;">Hoteles Reykjavik (D1 y D15)</h4>
       <div class="acc-grid">
         <div class="acc-card fade-in">
-          <h4>Kex Hostel</h4>
-          <p class="acc-desc">Reykjavik, ambiente social</p>
-          <div class="acc-price is">100-160&#8364;/noche</div>
-          <a href="https://kexhostel.is" target="_blank">kexhostel.is</a>
-        </div>
-        <div class="acc-card fade-in">
           <h4>Sand Hotel</h4>
-          <p class="acc-desc">Reykjavik centro, Kea Hotels</p>
+          <p class="acc-desc">Reykjavik centro, Kea Hotels, minimalista escandinavo</p>
           <div class="acc-price is">140-200&#8364;/noche</div>
-          <a href="https://keahotels.is" target="_blank">keahotels.is</a>
+          <a href="https://sand-hotel.is" target="_blank">sand-hotel.is</a>
         </div>
         <div class="acc-card fade-in">
-          <h4>Frost & Fire</h4>
-          <p class="acc-desc">Fludir, hot springs privados</p>
-          <div class="acc-price is">130-190&#8364;/noche</div>
-          <a href="https://frostogfuni.is" target="_blank">frostogfuni.is</a>
+          <h4>Kex Hostel</h4>
+          <p class="acc-desc">Ex-fabrica galletas, ambiente social</p>
+          <div class="acc-price is">100-160&#8364;/noche</div>
+          <a href="https://kexrvk.is" target="_blank">kexrvk.is</a>
         </div>
         <div class="acc-card fade-in">
-          <h4>Black Beach Suites</h4>
-          <p class="acc-desc">Vik, vista a la playa negra</p>
-          <div class="acc-price is">180-280&#8364;/noche</div>
-          <a href="https://blackbeachsuites.is" target="_blank">blackbeachsuites.is</a>
+          <h4>Hotel Borg</h4>
+          <p class="acc-desc">Art Deco 1930, icono centro</p>
+          <div class="acc-price is">200-300&#8364;/noche</div>
+          <a href="https://keahotels.is/hotel-borg" target="_blank">keahotels.is/hotel-borg</a>
         </div>
         <div class="acc-card fade-in">
-          <h4>Vogafjos</h4>
-          <p class="acc-desc">Myvatn, granja con vacas</p>
-          <div class="acc-price is">120-180&#8364;/noche</div>
-          <a href="https://vogafjos.is" target="_blank">vogafjos.is</a>
+          <h4>101 Hotel</h4>
+          <p class="acc-desc">Boutique de diseno</p>
+          <div class="acc-price is">300+&#8364;/noche</div>
+          <a href="https://101hotel.is" target="_blank">101hotel.is</a>
         </div>
         <div class="acc-card fade-in">
-          <h4>Siglo Hotel</h4>
-          <p class="acc-desc">Siglufjordur, harbor views</p>
-          <div class="acc-price is">160-250&#8364;/noche</div>
-          <a href="https://siglohotel.is" target="_blank">siglohotel.is</a>
-        </div>
-        <div class="acc-card fade-in">
-          <h4>Hotel Aldan</h4>
-          <p class="acc-desc">Seydisfjordur, boutique</p>
-          <div class="acc-price is">130-200&#8364;/noche</div>
-          <a href="https://hotelaldan.is" target="_blank">hotelaldan.is</a>
+          <h4>Reykjavik EDITION</h4>
+          <p class="acc-desc">Lujo, waterfront</p>
+          <div class="acc-price is">400+&#8364;/noche</div>
+          <a href="https://editionhotels.com/reykjavik" target="_blank">editionhotels.com</a>
         </div>
       </div>
 
       <div class="campervan-section fade-in">
-        <h4>Opcion Campervan</h4>
+        <h4>Motorhome (D2-D14, 13 noches)</h4>
         <div class="acc-grid">
           <div class="acc-card">
-            <h4>Cozy Campers</h4>
-            <p class="acc-desc">Campervan equipada</p>
-            <div class="acc-price is">140-240&#8364;/dia</div>
-            <a href="https://cozycampers.is" target="_blank">cozycampers.is</a>
-          </div>
-          <div class="acc-card">
             <h4>McRent</h4>
-            <p class="acc-desc">Autocaravana grande</p>
+            <p class="acc-desc">Dethleffs premium, bano y ducha, recomendado</p>
             <div class="acc-price is">220-340&#8364;/dia</div>
             <a href="https://mcrent.eu" target="_blank">mcrent.eu</a>
           </div>
           <div class="acc-card">
             <h4>Happy Campers</h4>
-            <p class="acc-desc">Budget option</p>
-            <div class="acc-price is">100-180&#8364;/dia</div>
+            <p class="acc-desc">Premium, incluye gas 12 dias</p>
+            <div class="acc-price is">140-240&#8364;/dia</div>
             <a href="https://happycampers.is" target="_blank">happycampers.is</a>
+          </div>
+          <div class="acc-card">
+            <h4>Kuku Campers</h4>
+            <p class="acc-desc">Marca islandesa local</p>
+            <div class="acc-price is">120-200&#8364;/dia</div>
+            <a href="https://kukucampers.is" target="_blank">kukucampers.is</a>
+          </div>
+          <div class="acc-card">
+            <h4>CampEasy</h4>
+            <p class="acc-desc">Familia, 10+ anos</p>
+            <div class="acc-price is">130-220&#8364;/dia</div>
+            <a href="https://campeasy.com" target="_blank">campeasy.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="campervan-section fade-in">
+        <h4>Campsites destacados en la ruta</h4>
+        <div class="acc-grid">
+          <div class="acc-card">
+            <h4>Reykjavik Campsite</h4>
+            <p class="acc-desc">Opcion fallback</p>
+            <a href="https://reykjavikcampsite.is" target="_blank">reykjavikcampsite.is</a>
+          </div>
+          <div class="acc-card">
+            <h4>Grundarfjordur</h4>
+            <p class="acc-desc">Vista Kirkjufell</p>
+            <a href="https://grundarfjordur.is" target="_blank">grundarfjordur.is</a>
+          </div>
+          <div class="acc-card">
+            <h4>Tungudalur Isafjordur</h4>
+            <p class="acc-desc">Valle bosque, rarisimo en Islandia</p>
+            <a href="https://tungudalur.is" target="_blank">tungudalur.is</a>
+          </div>
+          <div class="acc-card">
+            <h4>Hamrar Akureyri</h4>
+            <p class="acc-desc">Piscina al lado, bosque</p>
+          </div>
+          <div class="acc-card">
+            <h4>Reykjahlid Myvatn</h4>
+            <p class="acc-desc">Showers gratis, lake view</p>
+          </div>
+          <div class="acc-card">
+            <h4>Seydisfjordur</h4>
+            <p class="acc-desc">En el pueblo pastel</p>
+          </div>
+          <div class="acc-card">
+            <h4>Hallormsstadur</h4>
+            <p class="acc-desc">Egilsstadir, bosque mas grande</p>
+          </div>
+          <div class="acc-card">
+            <h4>Thakgil</h4>
+            <p class="acc-desc">Hidden gem entre montanas, hoguera comun</p>
+            <a href="https://thakgil.is" target="_blank">thakgil.is</a>
+          </div>
+          <div class="acc-card">
+            <h4>Skaftafell</h4>
+            <p class="acc-desc">Junto al parque nacional</p>
           </div>
         </div>
       </div>
@@ -845,71 +1170,52 @@
       <div class="log-grid">
         <div class="log-card fade-in">
           <h4>Vuelos</h4>
-          <p>300-700&#8364; pp. Icelandair o PLAY directo.</p>
+          <p><a href="https://icelandair.com" target="_blank">Icelandair</a> directo desde Madrid/BCN 4h, maleta incluida. <a href="https://flyplay.com" target="_blank">PLAY</a> low-cost. 300-700&euro; pp.</p>
         </div>
         <div class="log-card fade-in">
-          <h4>Visado</h4>
-          <p>DNI espanol. Sin tramites.</p>
+          <h4>Motorhome</h4>
+          <p>McRent <a href="https://mcrent.eu" target="_blank">mcrent.eu</a>. 220-340&euro;/dia. SAAP obligatorio ~350&euro;. GPS recomendado.</p>
         </div>
         <div class="log-card fade-in">
-          <h4>eSIM</h4>
-          <p>Airalo 10GB ~18$.</p>
+          <h4>Camping</h4>
+          <p><a href="https://tjalda.is" target="_blank">tjalda.is</a> + <a href="https://parka.is" target="_blank">parka.is</a>. Camping Card 187$ = 28 noches en 40+ sitios. Acampada libre PROHIBIDA (multas 50.000+ ISK).</p>
         </div>
         <div class="log-card fade-in">
-          <h4>Dinero</h4>
-          <p>Cashless total. Tarjeta chip+PIN en todas partes.</p>
-        </div>
-        <div class="log-card fade-in">
-          <h4>Seguro</h4>
-          <p>IATI o Heymondo ~80&#8364; pp.</p>
+          <h4>Carreteras</h4>
+          <p><a href="https://road.is" target="_blank">road.is</a> (condiciones) + <a href="https://vedur.is" target="_blank">vedur.is</a> (tiempo). F-roads PROHIBIDAS para motorhomes. Nueva tasa 2026: 6.95 ISK/km.</p>
         </div>
         <div class="log-card fade-in">
           <h4>Apps</h4>
-          <p>Road.is (estado carreteras), Vedur.is (meteo), SafeTravel.is, Google Maps offline</p>
+          <p>Road.is, Vedur.is, Parka.is, SafeTravel.is, Google Maps offline, Aurora Forecast (<a href="https://auroraforecast.is" target="_blank">auroraforecast.is</a>). Naver Maps no aplica, este es Islandia.</p>
+        </div>
+        <div class="log-card fade-in">
+          <h4>Seguro</h4>
+          <p>IATI (<a href="https://iatiseguros.com" target="_blank">iatiseguros.com</a>) o Heymondo (<a href="https://heymondo.com" target="_blank">heymondo.com</a>) ~80&euro; pp. SAAP en rental obligatorio.</p>
         </div>
       </div>
     </div>
 
     <!-- BUDGET ICELAND -->
     <div class="section">
-      <h2 class="section-title fade-in">Presupuesto estimado (2 personas)</h2>
-      <div class="grid2">
-        <div>
-          <h4 class="fade-in">Opcion Guesthouses ~8.000&#8364;</h4>
-          <div class="budget-table fade-in">
-            <table>
-              <thead><tr><th>Concepto</th><th>Rango</th></tr></thead>
-              <tbody>
-                <tr><td>Vuelos</td><td>600-1.400&#8364;</td></tr>
-                <tr><td>Alojamiento (15 noches)</td><td>2.000-3.500&#8364;</td></tr>
-                <tr><td>Coche (15 dias)</td><td>1.200-2.000&#8364;</td></tr>
-                <tr><td>Gasolina</td><td>400-600&#8364;</td></tr>
-                <tr><td>Comida</td><td>1.000-1.800&#8364;</td></tr>
-                <tr><td>Actividades</td><td>500-1.000&#8364;</td></tr>
-                <tr><td>eSIM + seguro</td><td>200-350&#8364;</td></tr>
-                <tr><td><strong>Total</strong></td><td><strong>~8.000&#8364;</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div>
-          <h4 class="fade-in">Opcion Campervan hibrida ~7.000&#8364;</h4>
-          <div class="budget-table fade-in">
-            <table>
-              <thead><tr><th>Concepto</th><th>Rango</th></tr></thead>
-              <tbody>
-                <tr><td>Vuelos</td><td>600-1.400&#8364;</td></tr>
-                <tr><td>Campervan (15 dias)</td><td>2.100-3.600&#8364;</td></tr>
-                <tr><td>Gasolina</td><td>400-600&#8364;</td></tr>
-                <tr><td>Campings</td><td>200-400&#8364;</td></tr>
-                <tr><td>Comida (supermercado+restaurante)</td><td>700-1.200&#8364;</td></tr>
-                <tr><td>Actividades</td><td>500-1.000&#8364;</td></tr>
-                <tr><td>eSIM + seguro</td><td>200-350&#8364;</td></tr>
-                <tr><td><strong>Total</strong></td><td><strong>~7.000&#8364;</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <h2 class="section-title fade-in">Presupuesto estimado (2 personas) &mdash; Motorhome</h2>
+      <div class="budget-table fade-in">
+        <table>
+          <thead><tr><th>Concepto</th><th>Rango</th></tr></thead>
+          <tbody>
+            <tr><td>Vuelos x2</td><td>600-1.400&euro;</td></tr>
+            <tr><td>Hotel Reykjavik 2 noches</td><td>300-400&euro;</td></tr>
+            <tr><td>Motorhome 13 dias (McRent)</td><td>2.860-4.420&euro;</td></tr>
+            <tr><td>SAAP + GPS extras</td><td>350&euro;</td></tr>
+            <tr><td>Gasolina + tasa km 2026</td><td>300-400&euro;</td></tr>
+            <tr><td>Campings 13 noches</td><td>300-400&euro;</td></tr>
+            <tr><td>Ferry Baldur (van+2pax)</td><td>70&euro;</td></tr>
+            <tr><td>Comida supermercado</td><td>250-350&euro;</td></tr>
+            <tr><td>Cenas restaurante (5-6)</td><td>300-500&euro;</td></tr>
+            <tr><td>Actividades (ballenas, baths, zodiac)</td><td>400-700&euro;</td></tr>
+            <tr><td>eSIM + seguro</td><td>200-380&euro;</td></tr>
+            <tr><td><strong>Total estimado</strong></td><td><strong>~7.500&euro; media</strong></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
